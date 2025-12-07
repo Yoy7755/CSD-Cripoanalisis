@@ -1,6 +1,7 @@
-from math import ceil, floor, gcd, sqrt, isqrt
+from math import ceil, floor, gcd, sqrt, log, exp, isqrt
 from random import randrange
 from numpy import mod
+import random
 import time
 import os 
 import concurrent.futures
@@ -238,8 +239,142 @@ def Lenstra(n: int, B: int = 1000, timeout: float = 345600.0) -> Optional[int]:
                 factor = gcd(den, n)
                 if 1 < factor < n:
                     return factor
-        print(f"Lenstra superó el timeout de {timeout} segundos")
+        # print(f"Lenstra superó el timeout de {timeout} segundos")
         return None
+
+def _get_primes(limit: int) -> List[int]:
+    """Genera una lista de primos hasta el límite."""
+    primes = []
+    is_prime = [True] * (limit + 1)
+    for p in range(2, limit + 1):
+        if is_prime[p]:
+            primes.append(p)
+            for i in range(p * p, limit + 1, p):
+                is_prime[i] = False
+    return primes
+
+def _is_smooth(num: int, base: List[int]) -> Tuple[bool, List[int]]:
+    """Verifica si num es B-smooth y devuelve el vector de exponentes."""
+    exponents = [0] * (len(base) + 1) # +1 para el factor -1
+    
+    if num < 0:
+        exponents[0] = 1
+        num = -num
+    
+    for i, p in enumerate(base):
+        while num % p == 0:
+            exponents[i + 1] += 1
+            num //= p
+            
+    return (num == 1, exponents)
+
+def _solve_gaussian(matrix: List[List[int]]) -> List[int]:
+    """Resuelve el sistema lineal mod 2 (Eliminación Gaussiana)."""
+    rows = len(matrix)
+    if rows == 0: return []
+    cols = len(matrix[0])
+    
+    aug_matrix = [row[:] + [1 if i == r else 0 for i in range(rows)] for r, row in enumerate(matrix)]
+    
+    pivot_row = 0
+    col = 0
+    while pivot_row < rows and col < cols:
+        if aug_matrix[pivot_row][col] % 2 == 0:
+            for i in range(pivot_row + 1, rows):
+                if aug_matrix[i][col] % 2 == 1:
+                    aug_matrix[pivot_row], aug_matrix[i] = aug_matrix[i], aug_matrix[pivot_row]
+                    break
+            else:
+                col += 1
+                continue
+        
+        for i in range(rows):
+            if i != pivot_row and aug_matrix[i][col] % 2 == 1:
+                for j in range(col, len(aug_matrix[i])):
+                    aug_matrix[i][j] = (aug_matrix[i][j] + aug_matrix[pivot_row][j])
+        
+        pivot_row += 1
+        col += 1
+
+    for row in aug_matrix:
+        if all(x % 2 == 0 for x in row[:cols]):
+            indices = [i for i, x in enumerate(row[cols:]) if x % 2 == 1]
+            if indices: return indices
+    return []
+
+def quadraticSieve(n: int, timeout: float = 345600.0) -> Optional[int]:
+    """
+    Algoritmo de Factorización por Criba Cuadrática.
+    Fase 1: Búsqueda de relaciones (Sieving).
+    Fase 2: Álgebra lineal sobre GF(2).
+    """
+    start_time = time.time()
+    
+    if n % 2 == 0: return 2
+    root_n = isqrt(n)
+    if root_n * root_n == n: return root_n
+
+    # Configuración de la base de factores B [cite: 46]
+    # Heurística simple para tamaño de base
+    try:
+        B_limit = int(exp(0.5 * sqrt(log(n) * log(log(n))))) + 50
+    except ValueError:
+        B_limit = 100 # Fallback para números muy pequeños
+
+    primes = _get_primes(B_limit) 
+    base = primes 
+    relations = [] 
+    
+    # Secuencia de desplazamiento: 0, 1, -1, 2, -2... 
+    count = 0
+    
+    while time.time() - start_time < timeout:
+        if count % 2 == 0:
+            current_shift = count // 2
+        else:
+            current_shift = -(count // 2 + 1)
+        count += 1
+        
+        a = root_n + current_shift
+        b2 = (a * a) - n # b2 = a^2 - n [cite: 20]
+        
+        is_smooth, exponents = _is_smooth(b2, base) # Verificar B-smooth [cite: 30]
+        
+        if is_smooth:
+            relations.append({'a': a, 'exponents': exponents, 'b2': b2})
+            
+            # Se necesitan suficientes relaciones (k + c) 
+            if len(relations) > len(base) + 5:
+                matrix_mod2 = [[e % 2 for e in r['exponents']] for r in relations]
+                indices = _solve_gaussian(matrix_mod2) # Resolver sistema lineal [cite: 124]
+                
+                if indices:
+                    x = 1
+                    y_exponents = [0] * (len(base) + 1)
+                    
+                    for idx in indices:
+                        rel = relations[idx]
+                        x = (x * rel['a']) % n
+                        for i, exp_val in enumerate(rel['exponents']):
+                            y_exponents[i] += exp_val
+                    
+                    y = 1
+                    # Calcular y = sqrt(producto b2_i) [cite: 96]
+                    for i, p in enumerate(base):
+                        exp_val = y_exponents[i + 1] // 2
+                        if exp_val > 0:
+                            y = (y * pow(p, exp_val, n)) % n
+                            
+                    # Verificar x ≡ ±y (mod n) [cite: 96]
+                    if x != y and x != (n - y):
+                        p_factor = gcd(x - y, n) # mcd(x-y, n) [cite: 102]
+                        if 1 < p_factor < n:
+                            return p_factor
+                    
+                    # Si falla, eliminamos la primera relación para probar otra combinación
+                    if indices:
+                         relations.pop(indices[0])
+    return None
 
 # híbrido entre Lenstra y PollardRho
 def hibrido(n: int, B: int = 3000, timeout: float = 345600.0):
