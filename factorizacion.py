@@ -1,6 +1,7 @@
 from math import ceil, floor, gcd, sqrt, log, exp, isqrt
 from random import randrange
 from numpy import mod
+import math
 import random
 import time
 import os 
@@ -156,17 +157,6 @@ class Point:
         if self.x is None:
             return "Point(∞)"
         return f"Point({self.x}, {self.y})"
-
-
-ALGORITMOS = {
-    'fermat' : Fermat,
-    'pollard_p1': pollardP_1,
-    'pollard_rho': pollardRho,
-    'lenstra': Lenstra,
-    'qs': quadraticSieve,
-    'hibrido': hibrido
-
-}
 
 # Método Fermat para la descomposición de números en factores
 # (Funciona bien con primos próximos entre sí)
@@ -412,6 +402,16 @@ def hibrido(n: int, B: int = 3000, timeout: float = 345600.0):
                     pass
     
     return None
+
+ALGORITMOS = {
+    'fermat' : Fermat,
+    'pollard_p1': pollardP_1,
+    'pollard_rho': pollardRho,
+    'lenstra': Lenstra,
+    'qs': quadraticSieve,
+    'hibrido': hibrido
+
+}
 
 def leer_fichero(filename: str) -> List[Tuple[int, int]]:
     """
