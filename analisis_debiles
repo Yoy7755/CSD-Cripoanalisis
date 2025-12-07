@@ -1,0 +1,144 @@
+import time
+from random import randrange
+from factorizacion import *
+import threading
+from math import floor, gcd, sqrt
+from sympy.ntheory.factor_ import pollard_pm1, pollard_rho
+from sympy.ntheory.ecm import ecm
+from sympy.ntheory.qs import qs
+def hibrido_improved(n: int, B: int = 3000, timeout: float = 345600.0):
+    start_time = time.time()
+    
+    while time.time() - start_time < timeout:
+        try:
+
+            x = randrange(n)
+            y = randrange(n)
+            a = randrange(n)
+            b = (pow(y, 2, n) - pow(x, 3, n) - (a * x) % n) % n
+            
+            c = EllipticCurve(a, b, n)
+            P = Q = Point(c, x, y)
+            
+            
+            delta = randrange(2, 20)
+            
+            for i in range(1, B + 1):
+                P = P * (2*i)  
+                Q = Q * i 
+                if P != None and Q != None: 
+                    factor = gcd((P.y - Q.y) % n, n)
+                    if 1 < factor < n:
+                        return factor
+                    factor = gcd((P.x - Q.x) % n, n)
+                    if 1 < factor < n:
+                        return factor
+        
+        except ZeroDivisionError as e:
+            den_str = str(e).split()
+            if len(den_str) > 0:
+                try:
+                    factor = gcd(int(den_str[0]), n)
+                    if 1 < factor < n:
+                        return factor
+                except ValueError:
+                    pass
+    
+    return None
+
+def factorizar_aprox(filename: str, outfile: str, timeout: float = 86400.0):
+    """
+    Correr en paralelo los diferentes métodos
+    
+    Args:
+        filename (str): Path del fichero
+        timeout (float): Timeout para cada método
+    """
+    challenges = leer_fichero(filename)
+    
+    def run_method(method, number):
+        start_time = time.time()
+        factor = method(number)
+        end_time = time.time()
+        return factor, end_time - start_time
+    
+    class RunWithTimeout:
+        def __init__(self, function, args):
+            self.function = function
+            self.args = args
+            self.answer = None
+            self.exception = None
+            self.completed = False
+            self.time = None
+
+        def worker(self):
+            try:
+                start_time = time.time()
+                self.answer = self.function(*self.args)
+                self.time = time.time() - start_time
+                self.completed = True
+            except Exception as e:
+                self.exception = e
+                self.completed = True
+
+        def run(self, timeout):
+            thread = threading.Thread(target=self.worker)
+            thread.daemon = True
+            thread.start()
+            thread.join(timeout)
+            
+            if not self.completed:
+                return None, None, "Timeout"
+            elif self.exception:
+                return None, None, f"Error: {self.exception}"
+            else:
+                return self.answer, self.time, "Success"
+            
+    with open(outfile, "w") as f:
+        for bit_size, number in challenges:
+            print(f"\nProcessing: {bit_size} bits, n = {number}")
+            
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                future_pollard = RunWithTimeout(pollard_rho, [number])
+                pollard_factor, pollard_time, status = future_pollard.run(timeout=36000)
+                print(status)
+                future_ecm = RunWithTimeout(ecm, [number])
+                lenstra_factor, lenstra_time, status = future_ecm.run(timeout=36000)
+                print(status)
+                future_hibrido = RunWithTimeout(hibrido_improved, [number])
+                hibrido_factor, hibrido_time, status = future_hibrido.run(timeout=36000)
+                print(status)
+                future_cc = RunWithTimeout(qs, (number, prime_bound:= 4000, 10000))
+                cc_factor, cc_time, status = future_cc.run(timeout=36000)
+                
+            result = {
+                'bit_size': bit_size,
+                'number': number,
+                'pollard_factor': pollard_factor,
+                'pollard_time': pollard_time,
+                'lenstra_factor': lenstra_factor,
+                'lenstra_time': lenstra_time,
+                'hibrido_factor': hibrido_factor,
+                'hibrido_time': hibrido_time,
+                'cc_factor': cc_factor,
+                'cc_time': cc_time,
+            }
+            
+            f.write(str(result) + "\n")
+            f.flush()
+    
+    return
+
+def main():
+    file = 'ProblemasFactDebilesRho.txt'
+    
+    # Ensure file exists
+    if not os.path.exists(file):
+        print(f"Error: Fichero '{file}' no encontrado!")
+        return
+    
+    # Run challenges
+    factorizar_aprox(file, 'resultados_debilesv2.txt')
+
+if __name__ == "__main__":
+    main()

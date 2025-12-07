@@ -1,0 +1,91 @@
+import time
+from random import randrange
+from factorizacion import *
+from math import floor, gcd, sqrt
+def hibrido_improved(n: int, B: int = 3000, timeout: float = 345600.0):
+    start_time = time.time()
+    
+    while time.time() - start_time < timeout:
+        try:
+
+            x = randrange(n)
+            y = randrange(n)
+            a = randrange(n)
+            b = (pow(y, 2, n) - pow(x, 3, n) - (a * x) % n) % n
+            
+            c = EllipticCurve(a, b, n)
+            P = Q = Point(c, x, y)
+            
+            for i in range(1, B + 1):
+                P = P * (2*i)  
+                Q = Q * i 
+                if P != None and Q != None: 
+                    factor = gcd((P.y - Q.y) % n, n)
+                    if 1 < factor < n:
+                        return factor
+                    factor = gcd((P.x - Q.x) % n, n)
+                    if 1 < factor < n:
+                        return factor
+        
+        except ZeroDivisionError as e:
+            den_str = str(e).split()
+            if len(den_str) > 0:
+                try:
+                    factor = gcd(int(den_str[0]), n)
+                    if 1 < factor < n:
+                        return factor
+                except ValueError:
+                    pass
+    
+    return None
+
+def factorizar_aprox(filename: str, outfile: str, timeout: float = 86400.0):
+    """
+    Correr en paralelo los diferentes métodos
+    
+    Args:
+        filename (str): Path del fichero
+        timeout (float): Timeout para cada método
+    """
+    challenges = leer_fichero(filename)
+    
+    def run_method(method, number):
+        start_time = time.time()
+        factor = method(number, timeout=timeout)
+        end_time = time.time()
+        return factor, end_time - start_time
+    
+    with open(outfile, "w") as f:
+        for bit_size, number in challenges:
+            print(f"\nProcessing: {bit_size} bits, n = {number}")
+            
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                future_hibrido = executor.submit(run_method, hibrido_improved, number)
+                
+                hibrido_factor, hibrido_time = future_hibrido.result()
+                
+            result = {
+                'bit_size': bit_size,
+                'number': number,
+                '2_factor': hibrido_factor,
+                '2_time': hibrido_time,
+            }
+            
+            f.write(str(result) + "\n")
+            f.flush()
+    
+    return
+
+def main():
+    file = 'ProblemasFactorizacion.txt'
+    
+    # Ensure file exists
+    if not os.path.exists(file):
+        print(f"Error: Fichero '{file}' no encontrado!")
+        return
+    
+    # Run challenges
+    factorizar_aprox('ProblemasFactorizacion.txt', 'resultados_3_aprox.txt')
+
+if __name__ == "__main__":
+    main()

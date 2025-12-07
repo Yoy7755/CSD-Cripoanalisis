@@ -8,7 +8,6 @@ import concurrent.futures
 from typing import List, Tuple, Optional
 from sympy.ntheory.factor_ import pollard_pm1, pollard_rho
 from sympy.ntheory.ecm import ecm
-from sympy.ntheory.qs import qs
 def leer_fichero(filename: str) -> List[Tuple[int, int]]:
     """
     Leer el fichero y procesar cada par bits/numero
@@ -33,7 +32,7 @@ def leer_fichero(filename: str) -> List[Tuple[int, int]]:
     
     return numeros
 
-def factorizar(filename: str, outfile: str, timeout: float = 3600.0):
+def factorizar(filename: str, outfile: str, timeout: float = 604800.0):
     """
     Correr en paralelo los diferentes métodos
     
@@ -49,59 +48,37 @@ def factorizar(filename: str, outfile: str, timeout: float = 3600.0):
         end_time = time.time()
         return factor, end_time - start_time
     
-    class RunWithTimeout:
-        def __init__(self, function, args):
-            self.function = function
-            self.args = args
-            self.answer = None
-            self.exception = None
-            self.completed = False
-            self.time = None
-
-        def worker(self):
-            try:
-                start_time = time.time()
-                self.answer = self.function(*self.args)
-                self.time = time.time() - start_time
-                self.completed = True
-            except Exception as e:
-                self.exception = e
-                self.completed = True
-
-        def run(self, timeout):
-            thread = threading.Thread(target=self.worker)
-            thread.daemon = True
-            thread.start()
-            thread.join(timeout)
-            
-            if not self.completed:
-                return None, None, "Timeout"
-            elif self.exception:
-                return None, None, f"Error: {self.exception}"
-            else:
-                return self.answer, self.time, "Success"
-    
     with open(outfile, "w") as f:
-        B = 2**32 - 1
         for bit_size, number in challenges:
             print(f"\nProcessing: {bit_size} bits, n = {number}")
-
-            runner = RunWithTimeout(qs, (number, prime_bound:= 4000, 10000))
-            result, exec_time, status = runner.run(timeout=3600)
-            print(status)
+            
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                future_pollardp_1 = executor.submit(run_method, pollard_pm1, number)
+                future_pollard = executor.submit(run_method, pollard_rho, number)
+                future_lenstra = executor.submit(run_method, ecm, number)
+                
+                pollardp_1_factor, pollardp_1_time = future_pollardp_1.result()
+                pollard_factor, pollard_time = future_pollard.result()
+                lenstra_factor, lenstra_time = future_lenstra.result()
+                
             result = {
                 'bit_size': bit_size,
                 'number': number,
-                'criba_cuadratica_factor': result,
-                'criba_cuadratica_time': exec_time
-            }                
+                'pollardP_1_factor': pollardp_1_factor,
+                'pollardP_1_time': pollardp_1_time,
+                'pollard_factor': pollard_factor,
+                'pollard_time': pollard_time,
+                'lenstra_factor': lenstra_factor,
+                'lenstra_time': lenstra_time,
+            }
+            
             f.write(str(result) + "\n")
             f.flush()
     
     return
 
 def main():
-    file = 'ProblemasFactDebilesRho.txt'
+    file = 'big_numbers.txt'
     
     # Ensure file exists
     if not os.path.exists(file):
@@ -109,7 +86,7 @@ def main():
         return
     
     # Run challenges
-    factorizar(file, 'resultados_criba_cuadrática_debiles.txt')
+    factorizar('big_numbers.txt', 'JESUCRISTO.txt')
 
 if __name__ == "__main__":
     main()

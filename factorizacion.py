@@ -21,7 +21,8 @@ class EllipticCurve:
 
 class Point:
     def __init__(self, curve: EllipticCurve, x: int = None, y: int = None):
-        """Inicializar un punto con sus coordenadas y al curva a la que pertenece. None representa el infinito"""
+        """Inicializar un punto con sus coordenadas y al curva a la que pertenece.
+           None representa el infinito"""
         self.curve = curve
         self.x = x
         self.y = y  
@@ -155,7 +156,7 @@ class Point:
         return f"Point({self.x}, {self.y})"
 
 # Método pollard p-1 para la descomposición de números en factores
-def pollardP_1(n:int, timeout: float = 86400.0) -> Optional[int]:
+def pollardP_1(n:int, timeout: float = 345600.0) -> Optional[int]:
     start_time = time.time()
     A = randrange(start=2, stop= n - 1, step=1)
     p = gcd(A,n)
@@ -172,7 +173,7 @@ def pollardP_1(n:int, timeout: float = 86400.0) -> Optional[int]:
 
 
 # Método pollardRho de descomposición de números en factores
-def pollardRho(n:int, timeout: float = 86400.0) -> Optional[int]:
+def pollardRho(n:int, timeout: float = 345600.0) -> Optional[int]:
     start_time = time.time()
     A = B = randrange(start=2, stop= n - 1, step=1)
     while time.time() - start_time < timeout:
@@ -186,7 +187,7 @@ def pollardRho(n:int, timeout: float = 86400.0) -> Optional[int]:
     return None
 
 # Método de factorización de curva elíptica de Lenstra
-def Lenstra(n: int, B: int = 1000, timeout: float = 86400.0) -> Optional[int]:
+def Lenstra(n: int, B: int = 1000, timeout: float = 345600.0) -> Optional[int]:
 
         start_time = time.time()
 
@@ -215,7 +216,7 @@ def Lenstra(n: int, B: int = 1000, timeout: float = 86400.0) -> Optional[int]:
         return None
 
 # híbrido entre Lenstra y PollardRho
-def hibrido(n: int, B: int = 3000, timeout: float = 86400.0) -> Optional[int]:
+def hibrido(n: int, B: int = 3000, timeout: float = 345600.0) -> Optional[int]:
         start_time = time.time()
 
         while time.time() - start_time < timeout:
@@ -228,16 +229,16 @@ def hibrido(n: int, B: int = 3000, timeout: float = 86400.0) -> Optional[int]:
                 while x1 == x2:
                     x2 = randrange(n)
 
-                numerator = (pow(y1,2,n) - pow(y2,2,n) - (pow(x1,3,n) - pow(x2,3,n))) % n
+                num = (pow(y1,2,n) - pow(y2,2,n) - (pow(x1,3,n) - pow(x2,3,n))) % n
                 
                 try:
-                    denominator = pow(x1 - x2,-1, n)
-                except ValueError:
+                    den = pow(x1 - x2,-1, n)
+                except Exception:
                     raise ZeroDivisionError(den)
                 
-                a = (numerator * denominator) % n
+                a = (num * den) % n
     
-                b = (y1**2 - x1**3 - a * x1) % n
+                b = (pow(y1, 2, n) - pow(x1, 3, n) - (a * x1) % n) % n
                 c = EllipticCurve(a, b, n)
 
                 P = Q = Point(c, x1, y1)
@@ -245,8 +246,7 @@ def hibrido(n: int, B: int = 3000, timeout: float = 86400.0) -> Optional[int]:
                 i = 0
                 while i < B:
                     i+=1
-                    P = P + R
-                    P = P + R
+                    P = P + (2 * R)
                     Q = Q + R
                     p_x = gcd(Q.x - P.x, n)
                     if 1 < p_x < n: return p_x
@@ -254,8 +254,7 @@ def hibrido(n: int, B: int = 3000, timeout: float = 86400.0) -> Optional[int]:
                     if 1 < p_y < n: return p_y
 
                     
-            except ZeroDivisionError as e:
-                
+            except ZeroDivisionError as e:  
                 den = int(str(e).split()[0])
                 factor = gcd(den, n)
                 if 1 < factor < n:
@@ -288,7 +287,7 @@ def leer_fichero(filename: str) -> List[Tuple[int, int]]:
     
     return numeros
 
-def factorizar(filename: str, outfile: str, timeout: float = 86400.0):
+def factorizar(filename: str, outfile: str, timeout: float = 84000.0):
     """
     Correr en paralelo los diferentes métodos
     
@@ -312,12 +311,10 @@ def factorizar(filename: str, outfile: str, timeout: float = 86400.0):
                 future_pollardp_1 = executor.submit(run_method, pollardP_1, number)
                 future_pollard = executor.submit(run_method, pollardRho, number)
                 future_lenstra = executor.submit(run_method, Lenstra, number)
-                future_hibrido = executor.submit(run_method, hibrido, number)
                 
                 pollardp_1_factor, pollardp_1_time = future_pollardp_1.result()
                 pollard_factor, pollard_time = future_pollard.result()
                 lenstra_factor, lenstra_time = future_lenstra.result()
-                hibrido_factor, hibrido_time = future_hibrido.result()
                 
             result = {
                 'bit_size': bit_size,
@@ -328,8 +325,6 @@ def factorizar(filename: str, outfile: str, timeout: float = 86400.0):
                 'pollard_time': pollard_time,
                 'lenstra_factor': lenstra_factor,
                 'lenstra_time': lenstra_time,
-                'hibrido_factor': hibrido_factor,
-                'hibrido_time': hibrido_time,
             }
             
             f.write(str(result) + "\n")
@@ -346,7 +341,7 @@ def main():
         return
     
     # Run challenges
-    factorizar('ProblemasFactorizacion.txt', 'resultados_factorizacion.txt')
+    factorizar(file, 'resultados_sinhibridocontinuacion.txt')
 
 if __name__ == "__main__":
     main()

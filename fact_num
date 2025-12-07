@@ -1,0 +1,66 @@
+import argparse
+import concurrent.futures
+import time
+from factorizacion import *
+# Assuming hibrido is imported or defined elsewhere
+
+def fact_num(bit:int, number: int, timeout: float = 864000.0):
+    """
+    Correr en paralelo los diferentes métodos
+    
+    Args:
+        bit (int): Tamaño en bits
+        number (int): Número a factorizar
+        timeout (float): Timeout para cada método
+    """
+    
+    def run_method(method, number):
+        start_time = time.time()
+        factor = method(number, timeout=timeout)
+        end_time = time.time()
+        return factor, end_time - start_time
+    
+    print(f"\nProcessing: {bit} bits, n = {number}")
+            
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+                future_pollardp_1 = executor.submit(run_method, pollardP_1, number)
+                future_pollard = executor.submit(run_method, pollardRho, number)
+                future_lenstra = executor.submit(run_method, Lenstra, number)
+                future_hibrido = executor.submit(run_method, hibrido, number)
+                
+                pollardp_1_factor, pollardp_1_time = future_pollardp_1.result()
+                pollard_factor, pollard_time = future_pollard.result()
+                lenstra_factor, lenstra_time = future_lenstra.result()
+                hibrido_factor, hibrido_time = future_hibrido.result()
+                
+    result = {
+        'bit_size': bit,
+        'number': number,
+        'pollardP_1_factor': pollardp_1_factor,
+        'pollardP_1_time': pollardp_1_time,
+        'pollard_factor': pollard_factor,
+        'pollard_time': pollard_time,
+        'lenstra_factor': lenstra_factor,
+        'lenstra_time': lenstra_time,
+        'hibrido_factor': hibrido_factor,
+        'hibrido_time': hibrido_time,
+    }
+            
+    print(result)
+    
+    return
+
+def main():
+    parser = argparse.ArgumentParser(description='Run factorization methods on a number.')
+    parser.add_argument('bit', type=int, help='Size in bits')
+    parser.add_argument('number', type=str, help='Number to factorize')
+    parser.add_argument('--timeout', type=float, default=864000.0, 
+                        help='Timeout in seconds (default: 864000.0)')
+    
+    args = parser.parse_args()
+    number = int(args.number)
+    
+    fact_num(args.bit, number, args.timeout)
+
+if __name__ == "__main__":
+    main()
