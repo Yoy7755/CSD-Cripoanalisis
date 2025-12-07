@@ -6,7 +6,6 @@ import time
 import os 
 import concurrent.futures
 from typing import List, Tuple, Optional
-from sympy.ntheory.qs import qs
 import tracemalloc
 import argparse
 
@@ -499,8 +498,8 @@ def main():
     
     parser.add_argument("--file", type=str, required=True, help="Archivo de Entrada")
     parser.add_argument("--out", type=str, required=True, help="Archivo de Salida")
-    parser.add_argument("--algos", nargs='+', choices=ALGORITHM_MAP.keys(), required=True,
-                        help=f"Lista de algoritmos. Posibles algoritmos: {list(ALGORITHM_MAP.keys())}")
+    parser.add_argument("--algos", nargs='+', choices=ALGORITMOS.keys(), required=True,
+                        help=f"Lista de algoritmos. Posibles algoritmos: {list(ALGORITMOS.keys())}")
     parser.add_argument("--timeout", type=float, default=84000.0, help="Timeout en segundos a definir")
 
     args = parser.parse_args()
