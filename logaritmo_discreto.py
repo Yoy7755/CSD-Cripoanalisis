@@ -10,8 +10,22 @@ from typing import List, Tuple, Optional
 import tracemalloc
 import argparse
 
+def babyStepGiantStep(p: int, alfa: int, beta: int, order: int ,timeout = 34600) -> Optional[int]:
+    n = isqrt(order) + 1
+    T= {}
 
-# Método pollardRho de descomposición de números en factores
+    current = 1
+    for i in range(n):
+        T[current] = i
+        current = (current * alfa) % p
+    alfa_minus = pow(alfa, -n, p)
+    gamma = beta
+    for i in range (0, n):
+        if gamma in T: return i*n + T[gamma]
+        gamma = (gamma*alfa_minus) % p
+
+    return
+
 def pollardRho(n:int, alpha:int, beta:int, o:int, timeout: float = 345600.0) -> Optional[int]:
     start_time = time.time()
     A = B = AA = BB = 0
@@ -54,66 +68,96 @@ def pollardRho(n:int, alpha:int, beta:int, o:int, timeout: float = 345600.0) -> 
                 return None
     return None
 
+
+
 ALGORITMOS = {
-    'pollard_rho': pollardRho,
+    'baby' : babyStepGiantStep,
+    'pollard_rho': pollardRho
 }
 
-def leer_fichero(filename: str) -> List[Tuple[int, int]]:
+def leer_fichero(filename: str) -> List[Tuple[int, int, int, int, int]]:
     """
-    Leer el fichero y procesar cada par bits/numero
+    Lee el fichero de retos de Logaritmo Discreto.
     
     Args:
         filename (str): path al fichero
     
     Returns:
-        Lista de tuplas (bit_size, number)
+        Lista de tuplas (n_bits, p, alpha, beta, orden)
     """
-    numeros = []
+    retos = []
     with open(filename, 'r') as f:
         for line in f:
-            if line.strip().startswith('#'):
+            # Ignorar comentarios y líneas vacías
+            if line.strip().startswith('#') or not line.strip():
                 continue
             
             try:
-                bit_size, number = line.strip().split(',')
-                numeros.append((int(bit_size.strip()), int(number.strip())))
-            except (ValueError, IndexError):
-                print(f"Saltándose linea invalida: {line.strip()}")
+                # Separar por comas y limpiar espacios
+                parts = line.strip().split(',')
+                
+                # Asegurar que tenemos los 5 elementos
+                if len(parts) != 5:
+                    raise ValueError("Número incorrecto de elementos en la línea")
+
+                n_bits = int(parts[0].strip())
+                p = int(parts[1].strip())
+                alpha = int(parts[2].strip())
+                beta = int(parts[3].strip())
+                orden = int(parts[4].strip())
+                
+                retos.append((n_bits, p, alpha, beta, orden))
+                
+            except (ValueError, IndexError) as e:
+                print(f"Saltándose linea invalida ({e}): {line.strip()}")
     
-    return numeros
+    return retos
 
 
-def run_method(metodo, number, timeout):
+def run_method(metodo_name, p, alpha, beta, order, timeout):
     """
-    Trabajador que ejecuta en paralelo las pruebas de un algoritmo.
+    Trabajador que ejecuta en paralelo un algoritmo de Logaritmo Discreto.
+    Busca x tal que: alpha^x = beta (mod p)
     """
-    method = ALGORITMOS[metodo]
+    method = ALGORITMOS.get(metodo_name)
     
+    if not method:
+        return None, 0, 0
+
     tracemalloc.start()
     start_time = time.time()
     
+    result = None
     try:
-        factor = method(number, timeout=timeout)
+        result = method(p, alpha, beta, order, timeout=timeout)
     except Exception as e:
-        factor = None
+        print(f"Error interno en algoritmo {metodo_name}: {e}")
+        result = None
         
     end_time = time.time()
     current, peak_memory = tracemalloc.get_traced_memory()
     tracemalloc.stop()
     
-    return factor, end_time - start_time, peak_memory
+    return result, end_time - start_time, peak_memory
 
-def factorizar(filename: str, outfile: str, algorithms: list, timeout: float = 84000.0):
+
+def resolver_dlp(filename: str, outfile: str, algorithms: list, timeout: float = 84000.0):
+    """
+    Orquestador para resolver retos de Logaritmo Discreto.
+    """
     challenges = leer_fichero(filename)
     
     with open(outfile, "a") as f:
         
-        for bit_size, number in challenges:
-            print(f"\Procesando: {bit_size} bits, n = {number}")
+        for n_bits, p, alpha, beta, order in challenges:
+            print(f"\nProcesando DLP {n_bits} bits: {alpha}^x = {beta} (mod {p})")
             
             result_row = {
-                'bit_size': bit_size, 
-                'number': number
+                'bit_size': n_bits, 
+                'p': p,
+                'alpha': alpha,
+                'beta': beta,
+                'order': order
             }
 
             with concurrent.futures.ProcessPoolExecutor() as executor:
@@ -121,19 +165,27 @@ def factorizar(filename: str, outfile: str, algorithms: list, timeout: float = 8
                 
                 for algo_name in algorithms:
                     if algo_name in ALGORITMOS:
-                        future = executor.submit(run_method, algo_name, number, timeout)
+                        future = executor.submit(run_method, algo_name, p, alpha, beta, order, timeout)
                         future_to_algo[future] = algo_name
+                    else:
+                        print(f"Advertencia: El algoritmo '{algo_name}' no está en el diccionario ALGORITMOS.")
                 
                 for future in concurrent.futures.as_completed(future_to_algo):
                     algo_name = future_to_algo[future]
                     try:
-                        factor, duration, peak_mem = future.result()
+                        dlp_solution, duration, peak_mem = future.result()
                         
-                        result_row[f'{algo_name}_factor'] = factor
+                        result_row[f'{algo_name}_result'] = dlp_solution
                         result_row[f'{algo_name}_time'] = duration
                         result_row[f'{algo_name}_mem_mb'] = peak_mem / (1024 * 1024)
+                        
+                        if dlp_solution is not None:
+                            print(f"  > {algo_name} encontró solución: {dlp_solution} en {duration:.4f}s")
+                        else:
+                            print(f"  > {algo_name} no encontró solución o expiró.")
+
                     except Exception as exc:
-                        print(f'{algo_name} generó una excepción: {exc}')
+                        print(f'{algo_name} generó una excepción crítica: {exc}')
 
             f.write(str(result_row) + "\n")
             f.flush()
@@ -153,11 +205,11 @@ def main():
         print(f"Error: File '{args.file}' not found!")
         return
 
-    print(f"Factorizando {args.file}")
+    print(f"Atacando el logaritmo discreto {args.file}")
     print(f"Algoritmos: {args.algos}")
     print(f"Salida: {args.out}")
 
-    factorizar(args.file, args.out, args.algos, args.timeout)
+    resolver_dlp(args.file, args.out, args.algos, args.timeout)
 
 if __name__ == "__main__":
     main()

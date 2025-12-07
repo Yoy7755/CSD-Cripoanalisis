@@ -1,3 +1,0 @@
-number_index,number,success,factor_found,other_factor,total_time,curves_attempted,setup_time,multiplication_time,gcd_time,check_time,scalar_multiplications,gcd_calculations,point_checks,found_via_zerodiv,found_via_gcd_x,found_via_gcd_y,zerodiv_count,gcd_x_hits,gcd_y_hits
-0,161281206098678787909586287780757909381,True,13007749439246224973,12398855532385219097,334.674,544,0.002999,332.183,1.659,0.435285,2173664,2173664,1086832,False,True,False,0,1,0
-1,280641673723419080757416007628644512347,True,16518286161541528517,16989757350058456991,308.203,501,0.005003,305.817,1.575,0.413720,2000570,2000569,1000285,False,False,True,0,0,1
