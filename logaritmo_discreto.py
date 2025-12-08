@@ -68,11 +68,195 @@ def pollardRho(n:int, alpha:int, beta:int, o:int, timeout: float = 345600.0) -> 
                 return None
     return None
 
+def _get_primes(limit: int) -> List[int]:
+    """Genera una lista de primos hasta el límite."""
+    primes = []
+    is_prime = [True] * (limit + 1)
+    for p in range(2, limit + 1):
+        if is_prime[p]:
+            primes.append(p)
+            for i in range(p * p, limit + 1, p):
+                is_prime[i] = False
+    return primes
+
+def _is_smooth_and_factor(num: int, base: List[int]) -> Tuple[bool, List[int]]:
+    """
+    Verifica si num es S-smooth sobre la base.
+    Devuelve (True, lista_de_exponentes) o (False, []).
+    """
+    exponents = [0] * len(base)
+    temp = num
+    
+    for i, p in enumerate(base):
+        while temp % p == 0:
+            exponents[i] += 1
+            temp //= p
+            if temp == 1:
+                return True, exponents
+    
+    return temp == 1, exponents
+
+def _solve_linear_system_mod(matrix: List[List[int]], target: List[int], modulus: int) -> Optional[List[int]]:
+    """
+    Resuelve Ax = B (mod m) usando Eliminación Gaussiana básica.
+    matrix: A (lista de filas), target: B.
+    Devuelve la solución x (lista de valores) o None si falla.
+    """
+    rows = len(matrix)
+    cols = len(matrix[0])
+    
+    # Trabajamos con copias para no mutar los originales
+    M = [row[:] for row in matrix]
+    res = target[:]
+    
+    pivot_row = 0
+    col = 0
+    
+    # Fase de escalonamiento (Forward elimination)
+    while pivot_row < rows and col < cols:
+        # Buscar pivote en la columna actual
+        sel = -1
+        for i in range(pivot_row, rows):
+            if gcd(M[i][col], modulus) == 1: # Necesitamos que sea invertible mod m
+                sel = i
+                break
+        
+        if sel == -1:
+            col += 1
+            continue
+            
+        # Intercambiar filas
+        M[pivot_row], M[sel] = M[sel], M[pivot_row]
+        res[pivot_row], res[sel] = res[sel], res[pivot_row]
+        
+        # Normalizar fila pivote (hacer que el elemento principal sea 1)
+        try:
+            inv = pow(M[pivot_row][col], -1, modulus)
+        except ValueError:
+            col += 1; continue # No invertible, saltar
+        
+        for j in range(col, cols):
+            M[pivot_row][j] = (M[pivot_row][j] * inv) % modulus
+        res[pivot_row] = (res[pivot_row] * inv) % modulus
+        
+        # Eliminar otras filas
+        for i in range(rows):
+            if i != pivot_row and M[i][col] != 0:
+                factor = M[i][col]
+                for j in range(col, cols):
+                    M[i][j] = (M[i][j] - factor * M[pivot_row][j]) % modulus
+                res[i] = (res[i] - factor * res[pivot_row]) % modulus
+                
+        pivot_row += 1
+        col += 1
+
+    # Verificación y extracción de solución
+    # Asumimos que las columnas se han resuelto en orden.
+    # Si el sistema está sobredeterminado, las filas extra deben ser consistentes (0=0).
+    # Si está subdeterminado, devolvemos una solución particular (ceros para variables libres).
+    
+    solution = [0] * cols
+    for i in range(min(rows, cols)):
+        # Buscar el 1 en la fila i (pivote)
+        for j in range(cols):
+            if M[i][j] == 1:
+                solution[j] = res[i]
+                break
+                
+    return solution
+
+def indexCalculus(n: int, alpha: int, beta: int, order: int, timeout: float = 345600.0) -> Optional[int]:
+    """
+    Algoritmo Index Calculus para Logaritmo Discreto.
+    n: módulo p
+    alpha: generador
+    beta: valor objetivo
+    order: orden del grupo
+    """
+    start_time = time.time()
+    
+    # 1. Selección de Base de Factores (Source: 239, 252)
+    # El tamaño de la base es crítico. Para números pequeños del ejemplo PDF usan primos pequeños.
+    # Para retos grandes, necesitaríamos una base más grande, pero el sistema lineal se vuelve costoso.
+    # Heurística simple: ~50 primos para empezar.
+    B_bound = 1000
+    S = _get_primes(B_bound)
+    k = len(S)
+    
+    relations_matrix = [] # Matriz de exponentes (e_i)
+    relations_rhs = []    # Lado derecho (r)
+    
+    # 2. Búsqueda de Relaciones Lineales (Source: 254-266)
+    # Necesitamos al menos k relaciones linealmente independientes (usamos k + margen)
+    required_relations = k + 10 
+    
+    while len(relations_matrix) < required_relations:
+        if time.time() - start_time > timeout: return None
+        
+        r = randrange(1, order)
+        val = pow(alpha, r, n) # alpha^r mod n
+        
+        is_smooth, exponents = _is_smooth_and_factor(val, S)
+        
+        if is_smooth:
+            relations_matrix.append(exponents)
+            relations_rhs.append(r)
+    
+    # 3. Resolver Sistema Lineal (Source: 267)
+
+    try:
+        logs_S = _solve_linear_system_mod(relations_matrix, relations_rhs, order)
+    except Exception:
+        return None # Error de inverso modular, seguir buscando
+    
+    if not logs_S: return None
+
+    # Obtenemos log_alpha(p_i) para cada p_i en S
+    logs_S = None
+    while logs_S is None:
+        if time.time() - start_time > timeout: return None
+        # Intentamos resolver. Si falla (sistema singular), buscamos más relaciones
+        try:
+            logs_S = _solve_linear_system_mod(relations_matrix, relations_rhs, order)
+        except ValueError:
+            pass # Error de inverso modular, seguir buscando
+            
+        if logs_S is None:
+            # Añadir más relaciones si falló la resolución
+            for _ in range(5):
+                r = randrange(1, order)
+                val = pow(alpha, r, n)
+                is_smooth, exponents = _is_smooth_and_factor(val, S)
+                if is_smooth:
+                    relations_matrix.append(exponents)
+                    relations_rhs.append(r)
+    
+    # 4. Cálculo del Logaritmo Individual (Source: 268-283)
+    # Buscar r tal que beta * alpha^r sea S-smooth
+    while time.time() - start_time < timeout:
+        r = randrange(1, order)
+        # val = beta * alpha^r mod n
+        val = (beta * pow(alpha, r, n)) % n
+        
+        is_smooth, exponents = _is_smooth_and_factor(val, S)
+        
+        if is_smooth:
+            # log(beta) + r = sum(e_i * log(p_i))  (mod order)
+            # log(beta) = sum(e_i * log(p_i)) - r  (mod order)
+            
+            sum_logs = sum(e * dl for e, dl in zip(exponents, logs_S))
+            
+            result = (sum_logs - r) % order
+            return result
+            
+    return None
+
 
 
 ALGORITMOS = {
     'baby' : babyStepGiantStep,
-    'pollard_rho': pollardRho
+    'pollard_rho': pollardRho,
+    'index_calculus': indexCalculus
 }
 
 def leer_fichero(filename: str) -> List[Tuple[int, int, int, int, int]]:
@@ -164,6 +348,9 @@ def resolver_dlp(filename: str, outfile: str, algorithms: list, timeout: float =
                 future_to_algo = {}
                 
                 for algo_name in algorithms:
+                    if algo_name == 'baby' and n_bits > 50:
+                        print(f"Saltando BSGS para {n_bits} bits (riesgo memoria).")
+                        continue
                     if algo_name in ALGORITMOS:
                         future = executor.submit(run_method, algo_name, p, alpha, beta, order, timeout)
                         future_to_algo[future] = algo_name
