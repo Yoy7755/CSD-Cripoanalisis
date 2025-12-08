@@ -56,8 +56,8 @@ def pollardRho(n:int, alpha:int, beta:int, o:int, timeout: float = 345600.0) -> 
 
     while time.time() - start_time < timeout:
         X, A, B = f(X, A, B, n, o)
-        XX = f(XX, AA, BB, n, o)
-        XX = f(XX, AA, BB, n, o)
+        XX, AA, BB = f(XX, AA, BB, n, o)
+        XX, AA, BB = f(XX, AA, BB, n, o)
         p = gcd(B-BB,o)
 
         if X == XX: 
@@ -203,14 +203,6 @@ def indexCalculus(n: int, alpha: int, beta: int, order: int, timeout: float = 34
             relations_rhs.append(r)
     
     # 3. Resolver Sistema Lineal (Source: 267)
-
-    try:
-        logs_S = _solve_linear_system_mod(relations_matrix, relations_rhs, order)
-    except Exception:
-        return None # Error de inverso modular, seguir buscando
-    
-    if not logs_S: return None
-
     # Obtenemos log_alpha(p_i) para cada p_i en S
     logs_S = None
     while logs_S is None:
@@ -218,18 +210,21 @@ def indexCalculus(n: int, alpha: int, beta: int, order: int, timeout: float = 34
         # Intentamos resolver. Si falla (sistema singular), buscamos más relaciones
         try:
             logs_S = _solve_linear_system_mod(relations_matrix, relations_rhs, order)
-        except ValueError:
+        except Exception:
             pass # Error de inverso modular, seguir buscando
             
         if logs_S is None:
             # Añadir más relaciones si falló la resolución
-            for _ in range(5):
+            found_new = 0
+            while found_new < 5:
+                if time.time() - start_time > timeout: return None
                 r = randrange(1, order)
                 val = pow(alpha, r, n)
                 is_smooth, exponents = _is_smooth_and_factor(val, S)
                 if is_smooth:
                     relations_matrix.append(exponents)
                     relations_rhs.append(r)
+                    found_new += 1
     
     # 4. Cálculo del Logaritmo Individual (Source: 268-283)
     # Buscar r tal que beta * alpha^r sea S-smooth
@@ -244,7 +239,10 @@ def indexCalculus(n: int, alpha: int, beta: int, order: int, timeout: float = 34
             # log(beta) + r = sum(e_i * log(p_i))  (mod order)
             # log(beta) = sum(e_i * log(p_i)) - r  (mod order)
             
-            sum_logs = sum(e * dl for e, dl in zip(exponents, logs_S))
+            sum_logs = 0
+            for i, e_i in enumerate(exponents):
+                # logs_S[i] es el logaritmo discreto del primo S[i]
+                sum_logs = (sum_logs + e_i * logs_S[i]) % order
             
             result = (sum_logs - r) % order
             return result
@@ -378,7 +376,7 @@ def resolver_dlp(filename: str, outfile: str, algorithms: list, timeout: float =
             f.flush()
 
 def main():
-    parser = argparse.ArgumentParser(description="Ejecutar algoritmos de factorización midiendo su complejidad temporal y espacial.")
+    parser = argparse.ArgumentParser(description="Ejecutar algoritmos de logaritmos discretos midiendo su complejidad temporal y espacial.")
     
     parser.add_argument("--file", type=str, required=True, help="Archivo de Entrada")
     parser.add_argument("--out", type=str, required=True, help="Archivo de Salida")
