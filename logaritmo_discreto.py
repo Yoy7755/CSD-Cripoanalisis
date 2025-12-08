@@ -175,7 +175,7 @@ def indexCalculus(n: int, alpha: int, beta: int, order: int, timeout: float = 34
     """
     start_time = time.time()
     
-    # 1. Selección de Base de Factores (Source: 239, 252)
+    # 1. Selección de Base de Factores 
     # El tamaño de la base es crítico. Para números pequeños del ejemplo PDF usan primos pequeños.
     # Para retos grandes, necesitaríamos una base más grande, pero el sistema lineal se vuelve costoso.
     # Heurística simple: ~50 primos para empezar.
@@ -186,7 +186,7 @@ def indexCalculus(n: int, alpha: int, beta: int, order: int, timeout: float = 34
     relations_matrix = [] # Matriz de exponentes (e_i)
     relations_rhs = []    # Lado derecho (r)
     
-    # 2. Búsqueda de Relaciones Lineales (Source: 254-266)
+    # 2. Búsqueda de Relaciones Lineales 
     # Necesitamos al menos k relaciones linealmente independientes (usamos k + margen)
     required_relations = k + 10 
     
@@ -202,7 +202,7 @@ def indexCalculus(n: int, alpha: int, beta: int, order: int, timeout: float = 34
             relations_matrix.append(exponents)
             relations_rhs.append(r)
     
-    # 3. Resolver Sistema Lineal (Source: 267)
+    # 3. Resolver Sistema Lineal 
     # Obtenemos log_alpha(p_i) para cada p_i en S
     logs_S = None
     while logs_S is None:
@@ -226,7 +226,7 @@ def indexCalculus(n: int, alpha: int, beta: int, order: int, timeout: float = 34
                     relations_rhs.append(r)
                     found_new += 1
     
-    # 4. Cálculo del Logaritmo Individual (Source: 268-283)
+    # 4. Cálculo del Logaritmo Individual
     # Buscar r tal que beta * alpha^r sea S-smooth
     while time.time() - start_time < timeout:
         r = randrange(1, order)
