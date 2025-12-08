@@ -463,7 +463,7 @@ def factorizar(filename: str, outfile: str, algorithms: list, timeout: float = 8
     with open(outfile, "a") as f:
         
         for bit_size, number in challenges:
-            print(f"\Procesando: {bit_size} bits, n = {number}")
+            print(f"\nProcesando: {bit_size} bits, n = {number}")
             
             result_row = {
                 'bit_size': bit_size, 
