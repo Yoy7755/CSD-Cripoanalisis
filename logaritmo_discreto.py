@@ -1,5 +1,7 @@
 from math import ceil, floor, gcd, sqrt, log, exp, isqrt
 from random import randrange
+from numpy import mod
+import math
 import random
 import time
 import os 
@@ -24,11 +26,53 @@ def babyStepGiantStep(p: int, alfa: int, beta: int, order: int ,timeout = 34600)
 
     return
 
+def pollardRho(n:int, alpha:int, beta:int, o:int, timeout: float = 345600.0) -> Optional[int]:
+    start_time = time.time()
+    A = B = AA = BB = 0
+    X = XX = 1
+
+    def f(x, a, b, n_mod, order):
+        partition = x % 3
+        
+        if partition == 1: 
+            
+            x_new = (beta * x) % n_mod
+            a_new = a
+            b_new = (b + 1) % order
+            
+        elif partition == 0: 
+            
+            x_new = pow(x, 2, n_mod)
+            a_new = (2 * a) % order
+            b_new = (2 * b) % order
+            
+        else: 
+            
+            x_new = (alpha * x) % n_mod
+            a_new = (a + 1) % order
+            b_new = b 
+            
+        return x_new, a_new, b_new
+
+    while time.time() - start_time < timeout:
+        X, A, B = f(X, A, B, n, o)
+        XX = f(XX, AA, BB, n, o)
+        XX = f(XX, AA, BB, n, o)
+        p = gcd(B-BB,o)
+
+        if X == XX: 
+            if p != 1: return None 
+            try:
+                return (AA - A)*pow(B - BB, -1, o) % o
+            except ValueError:
+                return None
+    return None
+
 
 
 ALGORITMOS = {
-    'baby' : babyStepGiantStep
-
+    'baby' : babyStepGiantStep,
+    'pollard_rho': pollardRho
 }
 
 def leer_fichero(filename: str) -> List[Tuple[int, int, int, int, int]]:
