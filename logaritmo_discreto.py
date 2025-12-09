@@ -397,6 +397,12 @@ def resolver_dlp(filename: str, outfile: str, algorithms: list, timeout: float =
                 future_to_algo = {}
                 
                 for algo_name in algorithms:
+                    if algo_name == 'baby' and n_bits > 52:
+                        print(f"  [Protección] Saltando BSGS para {n_bits} bits (Riesgo de colapso de RAM).")
+                        result_row[f'{algo_name}_result'] = None
+                        result_row[f'{algo_name}_time'] = 0
+                        result_row[f'{algo_name}_mem_mb'] = 0
+                        continue
                     if algo_name in ALGORITMOS:
                         future = executor.submit(run_method, algo_name, p, alpha, beta, order, timeout)
                         future_to_algo[future] = algo_name
