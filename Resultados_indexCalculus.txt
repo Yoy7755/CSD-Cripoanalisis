@@ -1,0 +1,508 @@
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1218285964, 'order': 1351629300, 'index_calculus_result': 392977800, 'index_calculus_time': 2.5945513248443604, 'index_calculus_mem_mb': 0.6442947387695312}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1034037786, 'order': 1351629300, 'index_calculus_result': 1026867284, 'index_calculus_time': 2.2022881507873535, 'index_calculus_mem_mb': 0.6390838623046875}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 146970801, 'order': 1351629300, 'index_calculus_result': 783342856, 'index_calculus_time': 2.7793667316436768, 'index_calculus_mem_mb': 0.6424522399902344}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2477926049, 'order': 1351629300, 'index_calculus_result': 573230831, 'index_calculus_time': 2.37206768989563, 'index_calculus_mem_mb': 0.6311378479003906}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1028735461, 'order': 1351629300, 'index_calculus_result': 621901293, 'index_calculus_time': 3.142987012863159, 'index_calculus_mem_mb': 0.6404991149902344}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2656939438, 'order': 1351629300, 'index_calculus_result': 1203686767, 'index_calculus_time': 2.182530164718628, 'index_calculus_mem_mb': 0.6109962463378906}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 961518652, 'order': 1351629300, 'index_calculus_result': 369968811, 'index_calculus_time': 2.685525894165039, 'index_calculus_mem_mb': 0.6382827758789062}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1897406873, 'order': 1351629300, 'index_calculus_result': 992934941, 'index_calculus_time': 2.698168992996216, 'index_calculus_mem_mb': 0.6548042297363281}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 318981655, 'order': 1351629300, 'index_calculus_result': 224445105, 'index_calculus_time': 2.7218809127807617, 'index_calculus_mem_mb': 0.6339111328125}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1168307071, 'order': 1351629300, 'index_calculus_result': 1237027906, 'index_calculus_time': 2.516221761703491, 'index_calculus_mem_mb': 0.6337814331054688}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1135767220, 'order': 1351629300, 'index_calculus_result': 1056623895, 'index_calculus_time': 2.607320547103882, 'index_calculus_mem_mb': 0.6509056091308594}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2262636539, 'order': 1351629300, 'index_calculus_result': 1127155918, 'index_calculus_time': 2.7617194652557373, 'index_calculus_mem_mb': 0.639434814453125}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2044006605, 'order': 1351629300, 'index_calculus_result': 138186080, 'index_calculus_time': 2.457683563232422, 'index_calculus_mem_mb': 0.6372108459472656}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1374225481, 'order': 1351629300, 'index_calculus_result': 646492098, 'index_calculus_time': 2.5823006629943848, 'index_calculus_mem_mb': 0.6462173461914062}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1347945949, 'order': 1351629300, 'index_calculus_result': 604412704, 'index_calculus_time': 2.206911563873291, 'index_calculus_mem_mb': 0.624664306640625}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1225845620, 'order': 1351629300, 'index_calculus_result': 1290814435, 'index_calculus_time': 1.8518896102905273, 'index_calculus_mem_mb': 0.618133544921875}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1677491187, 'order': 1351629300, 'index_calculus_result': 1049500801, 'index_calculus_time': 3.3191471099853516, 'index_calculus_mem_mb': 0.6663398742675781}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1923626201, 'order': 1351629300, 'index_calculus_result': 1106767907, 'index_calculus_time': 2.659719467163086, 'index_calculus_mem_mb': 0.6640129089355469}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1584645065, 'order': 1351629300, 'index_calculus_result': 1253952120, 'index_calculus_time': 2.9563145637512207, 'index_calculus_mem_mb': 0.6600799560546875}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2655188682, 'order': 1351629300, 'index_calculus_result': 829948081, 'index_calculus_time': 2.867614507675171, 'index_calculus_mem_mb': 0.6443748474121094}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1508173960, 'order': 1351629300, 'index_calculus_result': 864028288, 'index_calculus_time': 2.5338916778564453, 'index_calculus_mem_mb': 0.6472206115722656}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1516553962, 'order': 1351629300, 'index_calculus_result': 69277355, 'index_calculus_time': 3.048966646194458, 'index_calculus_mem_mb': 0.6876754760742188}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2367898019, 'order': 1351629300, 'index_calculus_result': 1318172518, 'index_calculus_time': 2.8563759326934814, 'index_calculus_mem_mb': 0.6506195068359375}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 162067355, 'order': 1351629300, 'index_calculus_result': 1250247377, 'index_calculus_time': 1.8020334243774414, 'index_calculus_mem_mb': 0.5989151000976562}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 650185787, 'order': 1351629300, 'index_calculus_result': 746682648, 'index_calculus_time': 2.434023380279541, 'index_calculus_mem_mb': 0.6279525756835938}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2680114046, 'order': 1351629300, 'index_calculus_result': 43940542, 'index_calculus_time': 2.465009927749634, 'index_calculus_mem_mb': 0.6449966430664062}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2583813854, 'order': 1351629300, 'index_calculus_result': 554125340, 'index_calculus_time': 2.127901792526245, 'index_calculus_mem_mb': 0.6454391479492188}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1463572907, 'order': 1351629300, 'index_calculus_result': 1122705890, 'index_calculus_time': 2.803030014038086, 'index_calculus_mem_mb': 0.6570625305175781}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 189782547, 'order': 1351629300, 'index_calculus_result': 966688708, 'index_calculus_time': 2.6838948726654053, 'index_calculus_mem_mb': 0.6405487060546875}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1012010233, 'order': 1351629300, 'index_calculus_result': 1001422027, 'index_calculus_time': 2.7091586589813232, 'index_calculus_mem_mb': 0.6560440063476562}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 533547320, 'order': 1351629300, 'index_calculus_result': 1343124198, 'index_calculus_time': 2.709641695022583, 'index_calculus_mem_mb': 0.6447944641113281}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1291037638, 'order': 1351629300, 'index_calculus_result': 1214436760, 'index_calculus_time': 2.731297254562378, 'index_calculus_mem_mb': 0.6451835632324219}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2653741833, 'order': 1351629300, 'index_calculus_result': 92076908, 'index_calculus_time': 2.18770170211792, 'index_calculus_mem_mb': 0.6413154602050781}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1653128628, 'order': 1351629300, 'index_calculus_result': 98743673, 'index_calculus_time': 2.8266348838806152, 'index_calculus_mem_mb': 0.6449203491210938}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1048561594, 'order': 1351629300, 'index_calculus_result': 262819075, 'index_calculus_time': 2.5223846435546875, 'index_calculus_mem_mb': 0.6492195129394531}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2028315626, 'order': 1351629300, 'index_calculus_result': 461691223, 'index_calculus_time': 2.50112247467041, 'index_calculus_mem_mb': 0.6396026611328125}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 329214853, 'order': 1351629300, 'index_calculus_result': 259749982, 'index_calculus_time': 2.4362633228302, 'index_calculus_mem_mb': 0.6254539489746094}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1400513884, 'order': 1351629300, 'index_calculus_result': 1306069011, 'index_calculus_time': 2.192566394805908, 'index_calculus_mem_mb': 0.6281356811523438}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 521938676, 'order': 1351629300, 'index_calculus_result': 880691166, 'index_calculus_time': 2.150057315826416, 'index_calculus_mem_mb': 0.6251678466796875}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 903547238, 'order': 1351629300, 'index_calculus_result': 270023441, 'index_calculus_time': 2.3667781352996826, 'index_calculus_mem_mb': 0.6144599914550781}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2102333786, 'order': 1351629300, 'index_calculus_result': 1340170698, 'index_calculus_time': 3.2693943977355957, 'index_calculus_mem_mb': 0.6613693237304688}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 823125106, 'order': 1351629300, 'index_calculus_result': 184703244, 'index_calculus_time': 2.9552106857299805, 'index_calculus_mem_mb': 0.634368896484375}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2242235628, 'order': 1351629300, 'index_calculus_result': 366033646, 'index_calculus_time': 2.589488983154297, 'index_calculus_mem_mb': 0.6381149291992188}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1305781680, 'order': 1351629300, 'index_calculus_result': 1198692504, 'index_calculus_time': 2.500140905380249, 'index_calculus_mem_mb': 0.6252632141113281}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2450667401, 'order': 1351629300, 'index_calculus_result': 489447796, 'index_calculus_time': 2.326035976409912, 'index_calculus_mem_mb': 0.6516647338867188}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 828520710, 'order': 1351629300, 'index_calculus_result': 1074706335, 'index_calculus_time': 2.2778854370117188, 'index_calculus_mem_mb': 0.6357231140136719}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1420384835, 'order': 1351629300, 'index_calculus_result': 125158558, 'index_calculus_time': 2.567289113998413, 'index_calculus_mem_mb': 0.6460189819335938}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 746811621, 'order': 1351629300, 'index_calculus_result': 466721866, 'index_calculus_time': 2.5190815925598145, 'index_calculus_mem_mb': 0.6299972534179688}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 2465806583, 'order': 1351629300, 'index_calculus_result': 1238808999, 'index_calculus_time': 1.9373047351837158, 'index_calculus_mem_mb': 0.6155586242675781}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 87, 'beta': 1992809178, 'order': 1351629300, 'index_calculus_result': 80228969, 'index_calculus_time': 2.5512514114379883, 'index_calculus_mem_mb': 0.6377906799316406}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 2700997237, 'order': 2703258600, 'index_calculus_result': 2600173282, 'index_calculus_time': 2.9882922172546387, 'index_calculus_mem_mb': 0.6477279663085938}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 2581010677, 'order': 2703258600, 'index_calculus_result': 727760241, 'index_calculus_time': 2.266205310821533, 'index_calculus_mem_mb': 0.64154052734375}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 845998131, 'order': 2703258600, 'index_calculus_result': 165982898, 'index_calculus_time': 1.9084751605987549, 'index_calculus_mem_mb': 0.6310539245605469}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 393359312, 'order': 2703258600, 'index_calculus_result': 993759925, 'index_calculus_time': 3.1939775943756104, 'index_calculus_mem_mb': 0.6462364196777344}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 444846865, 'order': 2703258600, 'index_calculus_result': 1166986246, 'index_calculus_time': 2.2523744106292725, 'index_calculus_mem_mb': 0.6201896667480469}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 355382235, 'order': 2703258600, 'index_calculus_result': 1287612485, 'index_calculus_time': 2.0240302085876465, 'index_calculus_mem_mb': 0.6223220825195312}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1100205427, 'order': 2703258600, 'index_calculus_result': 477543442, 'index_calculus_time': 2.451294183731079, 'index_calculus_mem_mb': 0.6312065124511719}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1243539179, 'order': 2703258600, 'index_calculus_result': 104089764, 'index_calculus_time': 2.4822545051574707, 'index_calculus_mem_mb': 0.62841796875}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 124837376, 'order': 2703258600, 'index_calculus_result': 373089369, 'index_calculus_time': 2.2021825313568115, 'index_calculus_mem_mb': 0.621490478515625}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1759586519, 'order': 2703258600, 'index_calculus_result': 559180520, 'index_calculus_time': 2.3904869556427, 'index_calculus_mem_mb': 0.6306953430175781}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1797315928, 'order': 2703258600, 'index_calculus_result': 59749479, 'index_calculus_time': 2.0738470554351807, 'index_calculus_mem_mb': 0.610015869140625}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1660261469, 'order': 2703258600, 'index_calculus_result': 345835077, 'index_calculus_time': 3.1199049949645996, 'index_calculus_mem_mb': 0.6616439819335938}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 275121446, 'order': 2703258600, 'index_calculus_result': 1403242988, 'index_calculus_time': 2.5783886909484863, 'index_calculus_mem_mb': 0.6567153930664062}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 908227114, 'order': 2703258600, 'index_calculus_result': 1859112421, 'index_calculus_time': 2.0964367389678955, 'index_calculus_mem_mb': 0.6101875305175781}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 67719384, 'order': 2703258600, 'index_calculus_result': 1059261731, 'index_calculus_time': 2.86037015914917, 'index_calculus_mem_mb': 0.6359481811523438}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1284545571, 'order': 2703258600, 'index_calculus_result': 1671601444, 'index_calculus_time': 2.415292263031006, 'index_calculus_mem_mb': 0.6152381896972656}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 145601188, 'order': 2703258600, 'index_calculus_result': 134827576, 'index_calculus_time': 2.7071778774261475, 'index_calculus_mem_mb': 0.6341438293457031}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1325264040, 'order': 2703258600, 'index_calculus_result': 1859261884, 'index_calculus_time': 2.336254596710205, 'index_calculus_mem_mb': 0.6238441467285156}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1978945742, 'order': 2703258600, 'index_calculus_result': 2553360612, 'index_calculus_time': 2.8123159408569336, 'index_calculus_mem_mb': 0.6609001159667969}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 160195986, 'order': 2703258600, 'index_calculus_result': 1540254893, 'index_calculus_time': 2.2676351070404053, 'index_calculus_mem_mb': 0.6193771362304688}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 2233208926, 'order': 2703258600, 'index_calculus_result': 1319254295, 'index_calculus_time': 3.023303747177124, 'index_calculus_mem_mb': 0.6474494934082031}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1610383746, 'order': 2703258600, 'index_calculus_result': 1356299824, 'index_calculus_time': 2.482126235961914, 'index_calculus_mem_mb': 0.6164131164550781}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 825854106, 'order': 2703258600, 'index_calculus_result': 2523818779, 'index_calculus_time': 1.8191885948181152, 'index_calculus_mem_mb': 0.6066513061523438}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 2308291365, 'order': 2703258600, 'index_calculus_result': 2591106046, 'index_calculus_time': 2.47542142868042, 'index_calculus_mem_mb': 0.640655517578125}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1475950512, 'order': 2703258600, 'index_calculus_result': 2461682807, 'index_calculus_time': 2.733833074569702, 'index_calculus_mem_mb': 0.6688613891601562}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 2461847262, 'order': 2703258600, 'index_calculus_result': 1946008145, 'index_calculus_time': 3.1388847827911377, 'index_calculus_mem_mb': 0.661834716796875}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 2428265924, 'order': 2703258600, 'index_calculus_result': 1880225188, 'index_calculus_time': 2.37715482711792, 'index_calculus_mem_mb': 0.6322517395019531}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1081944536, 'order': 2703258600, 'index_calculus_result': 1054518573, 'index_calculus_time': 2.4468679428100586, 'index_calculus_mem_mb': 0.6293678283691406}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 2509633416, 'order': 2703258600, 'index_calculus_result': 2517209447, 'index_calculus_time': 2.490259885787964, 'index_calculus_mem_mb': 0.6293106079101562}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1645217586, 'order': 2703258600, 'index_calculus_result': 1784546269, 'index_calculus_time': 2.283625841140747, 'index_calculus_mem_mb': 0.6187400817871094}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 677997206, 'order': 2703258600, 'index_calculus_result': 2561385961, 'index_calculus_time': 2.3080852031707764, 'index_calculus_mem_mb': 0.6523513793945312}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1905717891, 'order': 2703258600, 'index_calculus_result': 1613891854, 'index_calculus_time': 1.8329493999481201, 'index_calculus_mem_mb': 0.6090278625488281}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 387659726, 'order': 2703258600, 'index_calculus_result': 1116390756, 'index_calculus_time': 1.7809603214263916, 'index_calculus_mem_mb': 0.624786376953125}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 684285539, 'order': 2703258600, 'index_calculus_result': 370056324, 'index_calculus_time': 2.56964373588562, 'index_calculus_mem_mb': 0.6338996887207031}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 751526962, 'order': 2703258600, 'index_calculus_result': 1702982632, 'index_calculus_time': 2.375365972518921, 'index_calculus_mem_mb': 0.6310577392578125}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 458555593, 'order': 2703258600, 'index_calculus_result': 1529720177, 'index_calculus_time': 2.276616334915161, 'index_calculus_mem_mb': 0.6378631591796875}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1556805708, 'order': 2703258600, 'index_calculus_result': 2159547693, 'index_calculus_time': 2.368910312652588, 'index_calculus_mem_mb': 0.6633720397949219}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 292147803, 'order': 2703258600, 'index_calculus_result': 1983892958, 'index_calculus_time': 2.701792001724243, 'index_calculus_mem_mb': 0.6615753173828125}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 425745586, 'order': 2703258600, 'index_calculus_result': 948416801, 'index_calculus_time': 2.0720274448394775, 'index_calculus_mem_mb': 0.6116447448730469}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 2318617328, 'order': 2703258600, 'index_calculus_result': 2108858554, 'index_calculus_time': 1.6555681228637695, 'index_calculus_mem_mb': 0.5888023376464844}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1342235564, 'order': 2703258600, 'index_calculus_result': 2096704968, 'index_calculus_time': 2.7165327072143555, 'index_calculus_mem_mb': 0.6397666931152344}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1341402692, 'order': 2703258600, 'index_calculus_result': 2634387941, 'index_calculus_time': 2.388780117034912, 'index_calculus_mem_mb': 0.6310348510742188}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 955867687, 'order': 2703258600, 'index_calculus_result': 1934016841, 'index_calculus_time': 2.4852631092071533, 'index_calculus_mem_mb': 0.6295547485351562}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 2536109872, 'order': 2703258600, 'index_calculus_result': 1457193306, 'index_calculus_time': 1.8892405033111572, 'index_calculus_mem_mb': 0.6096878051757812}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1387417845, 'order': 2703258600, 'index_calculus_result': 2068729389, 'index_calculus_time': 2.445073127746582, 'index_calculus_mem_mb': 0.6313400268554688}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 2312703658, 'order': 2703258600, 'index_calculus_result': 333485720, 'index_calculus_time': 2.317598581314087, 'index_calculus_mem_mb': 0.6401252746582031}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 1894214684, 'order': 2703258600, 'index_calculus_result': 2214423233, 'index_calculus_time': 2.2201457023620605, 'index_calculus_mem_mb': 0.6409454345703125}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 2160638751, 'order': 2703258600, 'index_calculus_result': 2029150707, 'index_calculus_time': 2.7495758533477783, 'index_calculus_mem_mb': 0.645263671875}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 2422833271, 'order': 2703258600, 'index_calculus_result': 2345094698, 'index_calculus_time': 2.621238946914673, 'index_calculus_mem_mb': 0.6429252624511719}
+{'bit_size': 32, 'p': 2703258601, 'alpha': 11, 'beta': 26732408, 'order': 2703258600, 'index_calculus_result': 256883556, 'index_calculus_time': 2.730506420135498, 'index_calculus_mem_mb': 0.6556243896484375}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 30349383276, 'order': 33496983728, 'index_calculus_result': 26728298135, 'index_calculus_time': 5.552251577377319, 'index_calculus_mem_mb': 0.6810340881347656}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 852427156, 'order': 33496983728, 'index_calculus_result': 21530338566, 'index_calculus_time': 5.094752073287964, 'index_calculus_mem_mb': 0.6813583374023438}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 42062380241, 'order': 33496983728, 'index_calculus_result': 4926795871, 'index_calculus_time': 5.146888732910156, 'index_calculus_mem_mb': 0.6892547607421875}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 52610020023, 'order': 33496983728, 'index_calculus_result': 27404785033, 'index_calculus_time': 5.550531387329102, 'index_calculus_mem_mb': 0.6993446350097656}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 57212518718, 'order': 33496983728, 'index_calculus_result': 20345707606, 'index_calculus_time': 6.1800007820129395, 'index_calculus_mem_mb': 0.7374610900878906}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 49214219717, 'order': 33496983728, 'index_calculus_result': 4437462417, 'index_calculus_time': 5.46371865272522, 'index_calculus_mem_mb': 0.6957931518554688}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 32373334469, 'order': 33496983728, 'index_calculus_result': 22441438714, 'index_calculus_time': 4.863860607147217, 'index_calculus_mem_mb': 0.6868553161621094}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 20997403006, 'order': 33496983728, 'index_calculus_result': 20211715243, 'index_calculus_time': 5.7602880001068115, 'index_calculus_mem_mb': 0.717498779296875}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 11769166298, 'order': 33496983728, 'index_calculus_result': 32823454243, 'index_calculus_time': 5.375856161117554, 'index_calculus_mem_mb': 0.6801834106445312}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 30609897741, 'order': 33496983728, 'index_calculus_result': 20311300139, 'index_calculus_time': 5.295301198959351, 'index_calculus_mem_mb': 0.6974296569824219}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 18554915360, 'order': 33496983728, 'index_calculus_result': 1428578291, 'index_calculus_time': 5.357025384902954, 'index_calculus_mem_mb': 0.7082595825195312}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 65891085647, 'order': 33496983728, 'index_calculus_result': 245251487, 'index_calculus_time': 5.910325050354004, 'index_calculus_mem_mb': 0.718963623046875}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 59560979674, 'order': 33496983728, 'index_calculus_result': 3240783417, 'index_calculus_time': 6.176656723022461, 'index_calculus_mem_mb': 0.7156600952148438}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 53888383836, 'order': 33496983728, 'index_calculus_result': 15048993377, 'index_calculus_time': 5.148102045059204, 'index_calculus_mem_mb': 0.7132835388183594}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 59628654350, 'order': 33496983728, 'index_calculus_result': 25986833939, 'index_calculus_time': 4.941512584686279, 'index_calculus_mem_mb': 0.6827468872070312}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 2175986603, 'order': 33496983728, 'index_calculus_result': 29129552008, 'index_calculus_time': 5.461976528167725, 'index_calculus_mem_mb': 0.699310302734375}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 15299000216, 'order': 33496983728, 'index_calculus_result': 13263845123, 'index_calculus_time': 5.03917670249939, 'index_calculus_mem_mb': 0.7254676818847656}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 41353596710, 'order': 33496983728, 'index_calculus_result': 2145006780, 'index_calculus_time': 4.993868827819824, 'index_calculus_mem_mb': 0.69024658203125}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 18289186489, 'order': 33496983728, 'index_calculus_result': 781459281, 'index_calculus_time': 4.7994115352630615, 'index_calculus_mem_mb': 0.6891212463378906}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 25367636030, 'order': 33496983728, 'index_calculus_result': 18774663912, 'index_calculus_time': 5.500055551528931, 'index_calculus_mem_mb': 0.7004203796386719}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 40851317997, 'order': 33496983728, 'index_calculus_result': 19820216956, 'index_calculus_time': 4.379247665405273, 'index_calculus_mem_mb': 0.6993598937988281}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 52261339178, 'order': 33496983728, 'index_calculus_result': 32423706867, 'index_calculus_time': 4.444286584854126, 'index_calculus_mem_mb': 0.6695289611816406}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 7222233599, 'order': 33496983728, 'index_calculus_result': 1775303293, 'index_calculus_time': 4.931541442871094, 'index_calculus_mem_mb': 0.6781082153320312}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 17222968625, 'order': 33496983728, 'index_calculus_result': 21359052842, 'index_calculus_time': 5.259644031524658, 'index_calculus_mem_mb': 0.7200202941894531}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 51791374024, 'order': 33496983728, 'index_calculus_result': 14311203847, 'index_calculus_time': 4.345342636108398, 'index_calculus_mem_mb': 0.6668624877929688}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 38479935163, 'order': 33496983728, 'index_calculus_result': 19280451365, 'index_calculus_time': 5.5929388999938965, 'index_calculus_mem_mb': 0.6968307495117188}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 52762425205, 'order': 33496983728, 'index_calculus_result': 5963946655, 'index_calculus_time': 4.579246759414673, 'index_calculus_mem_mb': 0.6807479858398438}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 3079523687, 'order': 33496983728, 'index_calculus_result': 18294637943, 'index_calculus_time': 5.612829685211182, 'index_calculus_mem_mb': 0.6941986083984375}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 1671113861, 'order': 33496983728, 'index_calculus_result': 17934653020, 'index_calculus_time': 4.85146951675415, 'index_calculus_mem_mb': 0.6844215393066406}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 1355241326, 'order': 33496983728, 'index_calculus_result': 28663187633, 'index_calculus_time': 4.530994415283203, 'index_calculus_mem_mb': 0.6895942687988281}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 8415459303, 'order': 33496983728, 'index_calculus_result': 24489937553, 'index_calculus_time': 5.293545961380005, 'index_calculus_mem_mb': 0.7021102905273438}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 13484186681, 'order': 33496983728, 'index_calculus_result': 10308503879, 'index_calculus_time': 5.013134241104126, 'index_calculus_mem_mb': 0.6566963195800781}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 32630704019, 'order': 33496983728, 'index_calculus_result': 14879168519, 'index_calculus_time': 5.571819543838501, 'index_calculus_mem_mb': 0.7212562561035156}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 66557672734, 'order': 33496983728, 'index_calculus_result': 18432633685, 'index_calculus_time': 4.073227882385254, 'index_calculus_mem_mb': 0.6568489074707031}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 30765178143, 'order': 33496983728, 'index_calculus_result': 17931158603, 'index_calculus_time': 6.07257080078125, 'index_calculus_mem_mb': 0.7203712463378906}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 22804546503, 'order': 33496983728, 'index_calculus_result': 23649602849, 'index_calculus_time': 5.1712119579315186, 'index_calculus_mem_mb': 0.6950836181640625}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 23806594774, 'order': 33496983728, 'index_calculus_result': 12369750530, 'index_calculus_time': 5.2290709018707275, 'index_calculus_mem_mb': 0.7019767761230469}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 49023512346, 'order': 33496983728, 'index_calculus_result': 19325748372, 'index_calculus_time': 4.825658082962036, 'index_calculus_mem_mb': 0.6867218017578125}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 22689661422, 'order': 33496983728, 'index_calculus_result': 7591497443, 'index_calculus_time': 4.187144041061401, 'index_calculus_mem_mb': 0.6650428771972656}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 54932938592, 'order': 33496983728, 'index_calculus_result': 19905133365, 'index_calculus_time': 5.855564832687378, 'index_calculus_mem_mb': 0.7287025451660156}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 58237676552, 'order': 33496983728, 'index_calculus_result': 531223636, 'index_calculus_time': 4.410891056060791, 'index_calculus_mem_mb': 0.6772689819335938}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 37710990833, 'order': 33496983728, 'index_calculus_result': 32088323228, 'index_calculus_time': 5.186100244522095, 'index_calculus_mem_mb': 0.7053489685058594}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 24074578858, 'order': 33496983728, 'index_calculus_result': 18986220448, 'index_calculus_time': 4.632843732833862, 'index_calculus_mem_mb': 0.6769256591796875}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 62663737217, 'order': 33496983728, 'index_calculus_result': 27169921902, 'index_calculus_time': 4.590009689331055, 'index_calculus_mem_mb': 0.6818923950195312}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 5672578625, 'order': 33496983728, 'index_calculus_result': 24429506800, 'index_calculus_time': 5.5643744468688965, 'index_calculus_mem_mb': 0.7096519470214844}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 49577723763, 'order': 33496983728, 'index_calculus_result': 21689389513, 'index_calculus_time': 5.802053928375244, 'index_calculus_mem_mb': 0.7338905334472656}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 34864797059, 'order': 33496983728, 'index_calculus_result': 30365143601, 'index_calculus_time': 5.0858893394470215, 'index_calculus_mem_mb': 0.6991386413574219}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 37153652157, 'order': 33496983728, 'index_calculus_result': 18441013508, 'index_calculus_time': 4.228802442550659, 'index_calculus_mem_mb': 0.6687393188476562}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 20555400040, 'order': 33496983728, 'index_calculus_result': 8485925142, 'index_calculus_time': 5.1170430183410645, 'index_calculus_mem_mb': 0.7048606872558594}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 100, 'beta': 52154684471, 'order': 33496983728, 'index_calculus_result': 6648519731, 'index_calculus_time': 4.5799877643585205, 'index_calculus_mem_mb': 0.6601142883300781}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 25366008771, 'order': 66993967456, 'index_calculus_result': 37827657304, 'index_calculus_time': 4.8300230503082275, 'index_calculus_mem_mb': 0.6946029663085938}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 32980782104, 'order': 66993967456, 'index_calculus_result': 16571065053, 'index_calculus_time': 4.907530069351196, 'index_calculus_mem_mb': 0.6994438171386719}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 8755659716, 'order': 66993967456, 'index_calculus_result': 34359919378, 'index_calculus_time': 4.507731914520264, 'index_calculus_mem_mb': 0.6817474365234375}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 32984669385, 'order': 66993967456, 'index_calculus_result': 14055660695, 'index_calculus_time': 5.438628435134888, 'index_calculus_mem_mb': 0.6932640075683594}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 50468690576, 'order': 66993967456, 'index_calculus_result': 51393156830, 'index_calculus_time': 6.011433362960815, 'index_calculus_mem_mb': 0.7024459838867188}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 59888528086, 'order': 66993967456, 'index_calculus_result': 34143747558, 'index_calculus_time': 4.589951038360596, 'index_calculus_mem_mb': 0.6872711181640625}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 156377214, 'order': 66993967456, 'index_calculus_result': 12286015553, 'index_calculus_time': 4.769338607788086, 'index_calculus_mem_mb': 0.6891937255859375}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 23179182558, 'order': 66993967456, 'index_calculus_result': 14461898809, 'index_calculus_time': 5.130779266357422, 'index_calculus_mem_mb': 0.6767845153808594}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 10652037082, 'order': 66993967456, 'index_calculus_result': 50405063688, 'index_calculus_time': 5.376054525375366, 'index_calculus_mem_mb': 0.6903419494628906}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 7863495026, 'order': 66993967456, 'index_calculus_result': 23925397164, 'index_calculus_time': 5.808269262313843, 'index_calculus_mem_mb': 0.7040901184082031}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 26559535301, 'order': 66993967456, 'index_calculus_result': 48793310636, 'index_calculus_time': 5.561038255691528, 'index_calculus_mem_mb': 0.6934127807617188}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 50741327778, 'order': 66993967456, 'index_calculus_result': 16641421385, 'index_calculus_time': 4.787446737289429, 'index_calculus_mem_mb': 0.6879959106445312}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 39047887542, 'order': 66993967456, 'index_calculus_result': 27825362622, 'index_calculus_time': 4.227806329727173, 'index_calculus_mem_mb': 0.6938858032226562}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 3224807925, 'order': 66993967456, 'index_calculus_result': 13676608148, 'index_calculus_time': 4.47140645980835, 'index_calculus_mem_mb': 0.6880760192871094}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 7824105141, 'order': 66993967456, 'index_calculus_result': 42775994298, 'index_calculus_time': 3.67490291595459, 'index_calculus_mem_mb': 0.6778678894042969}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 38771676899, 'order': 66993967456, 'index_calculus_result': 51392297690, 'index_calculus_time': 4.85077166557312, 'index_calculus_mem_mb': 0.7051544189453125}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 8366740491, 'order': 66993967456, 'index_calculus_result': 59788199507, 'index_calculus_time': 4.697899341583252, 'index_calculus_mem_mb': 0.692047119140625}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 38110996778, 'order': 66993967456, 'index_calculus_result': 25201535559, 'index_calculus_time': 5.680420398712158, 'index_calculus_mem_mb': 0.6845474243164062}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 25300200909, 'order': 66993967456, 'index_calculus_result': 62390798101, 'index_calculus_time': 5.350812673568726, 'index_calculus_mem_mb': 0.6786880493164062}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 62664034233, 'order': 66993967456, 'index_calculus_result': 52698084627, 'index_calculus_time': 5.124080181121826, 'index_calculus_mem_mb': 0.6894340515136719}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 37568180536, 'order': 66993967456, 'index_calculus_result': 39693574496, 'index_calculus_time': 4.8204357624053955, 'index_calculus_mem_mb': 0.681854248046875}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 17247757174, 'order': 66993967456, 'index_calculus_result': 52051354466, 'index_calculus_time': 5.426292657852173, 'index_calculus_mem_mb': 0.7209281921386719}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 15366231010, 'order': 66993967456, 'index_calculus_result': 6205546788, 'index_calculus_time': 4.727992057800293, 'index_calculus_mem_mb': 0.6824684143066406}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 28420630119, 'order': 66993967456, 'index_calculus_result': 16371170645, 'index_calculus_time': 4.580498695373535, 'index_calculus_mem_mb': 0.69696044921875}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 58716266391, 'order': 66993967456, 'index_calculus_result': 10367291994, 'index_calculus_time': 4.626859903335571, 'index_calculus_mem_mb': 0.6791114807128906}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 23345199444, 'order': 66993967456, 'index_calculus_result': 18711376628, 'index_calculus_time': 4.886780738830566, 'index_calculus_mem_mb': 0.7263908386230469}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 44679437314, 'order': 66993967456, 'index_calculus_result': 63776992889, 'index_calculus_time': 5.294320344924927, 'index_calculus_mem_mb': 0.6948776245117188}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 43599463711, 'order': 66993967456, 'index_calculus_result': 34438244636, 'index_calculus_time': 4.576094150543213, 'index_calculus_mem_mb': 0.6771812438964844}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 60545786485, 'order': 66993967456, 'index_calculus_result': 3899093678, 'index_calculus_time': 4.945136547088623, 'index_calculus_mem_mb': 0.6648597717285156}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 12875622061, 'order': 66993967456, 'index_calculus_result': 20706654804, 'index_calculus_time': 4.590023756027222, 'index_calculus_mem_mb': 0.6894493103027344}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 52074632714, 'order': 66993967456, 'index_calculus_result': 41230131219, 'index_calculus_time': 5.44327187538147, 'index_calculus_mem_mb': 0.7104339599609375}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 35251078158, 'order': 66993967456, 'index_calculus_result': 40703869820, 'index_calculus_time': 5.158886194229126, 'index_calculus_mem_mb': 0.6715469360351562}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 16940403253, 'order': 66993967456, 'index_calculus_result': 22201909265, 'index_calculus_time': 4.305000305175781, 'index_calculus_mem_mb': 0.6572418212890625}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 16069519954, 'order': 66993967456, 'index_calculus_result': 57252927944, 'index_calculus_time': 4.842983245849609, 'index_calculus_mem_mb': 0.7195968627929688}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 40604813270, 'order': 66993967456, 'index_calculus_result': 41099737619, 'index_calculus_time': 5.061687469482422, 'index_calculus_mem_mb': 0.6859359741210938}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 45177700541, 'order': 66993967456, 'index_calculus_result': 8332508183, 'index_calculus_time': 4.496975898742676, 'index_calculus_mem_mb': 0.6815681457519531}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 5663891402, 'order': 66993967456, 'index_calculus_result': 86103565, 'index_calculus_time': 4.400343656539917, 'index_calculus_mem_mb': 0.6823921203613281}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 7981497758, 'order': 66993967456, 'index_calculus_result': 14121897384, 'index_calculus_time': 4.768831014633179, 'index_calculus_mem_mb': 0.7099952697753906}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 17409178487, 'order': 66993967456, 'index_calculus_result': 19023192519, 'index_calculus_time': 4.816091060638428, 'index_calculus_mem_mb': 0.6938438415527344}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 29418358916, 'order': 66993967456, 'index_calculus_result': 12796699086, 'index_calculus_time': 5.294447183609009, 'index_calculus_mem_mb': 0.7211151123046875}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 1359250418, 'order': 66993967456, 'index_calculus_result': 41860070554, 'index_calculus_time': 5.716604232788086, 'index_calculus_mem_mb': 0.6896896362304688}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 33320565533, 'order': 66993967456, 'index_calculus_result': 57002826387, 'index_calculus_time': 5.475455284118652, 'index_calculus_mem_mb': 0.7046241760253906}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 59023864462, 'order': 66993967456, 'index_calculus_result': 24180561999, 'index_calculus_time': 5.195002794265747, 'index_calculus_mem_mb': 0.7029914855957031}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 7106172603, 'order': 66993967456, 'index_calculus_result': 65508386488, 'index_calculus_time': 4.750640392303467, 'index_calculus_mem_mb': 0.6878585815429688}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 7441433513, 'order': 66993967456, 'index_calculus_result': 3969290034, 'index_calculus_time': 4.446995973587036, 'index_calculus_mem_mb': 0.6516151428222656}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 3888119127, 'order': 66993967456, 'index_calculus_result': 23334875655, 'index_calculus_time': 4.59916877746582, 'index_calculus_mem_mb': 0.6956405639648438}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 36761042288, 'order': 66993967456, 'index_calculus_result': 31929263323, 'index_calculus_time': 4.932133674621582, 'index_calculus_mem_mb': 0.6701164245605469}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 4597171708, 'order': 66993967456, 'index_calculus_result': 28368052364, 'index_calculus_time': 4.720089673995972, 'index_calculus_mem_mb': 0.6740951538085938}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 510115972, 'order': 66993967456, 'index_calculus_result': 53669298895, 'index_calculus_time': 5.145308017730713, 'index_calculus_mem_mb': 0.6934356689453125}
+{'bit_size': 36, 'p': 66993967457, 'alpha': 3, 'beta': 7831447767, 'order': 66993967456, 'index_calculus_result': 50725731938, 'index_calculus_time': 5.546569347381592, 'index_calculus_mem_mb': 0.7346534729003906}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 28012336526, 'order': 463749088103, 'index_calculus_result': 37164577312, 'index_calculus_time': 9.961659669876099, 'index_calculus_mem_mb': 0.7542343139648438}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 199305343262, 'order': 463749088103, 'index_calculus_result': 172709304067, 'index_calculus_time': 9.655639886856079, 'index_calculus_mem_mb': 0.752655029296875}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 795887145247, 'order': 463749088103, 'index_calculus_result': 463721962204, 'index_calculus_time': 9.253907442092896, 'index_calculus_mem_mb': 0.73687744140625}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 146423289318, 'order': 463749088103, 'index_calculus_result': 243774646148, 'index_calculus_time': 8.602051258087158, 'index_calculus_mem_mb': 0.6982460021972656}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 706951351644, 'order': 463749088103, 'index_calculus_result': 378188682975, 'index_calculus_time': 8.625476837158203, 'index_calculus_mem_mb': 0.7249946594238281}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 328281407935, 'order': 463749088103, 'index_calculus_result': 216695386018, 'index_calculus_time': 8.652640104293823, 'index_calculus_mem_mb': 0.7222023010253906}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 804550621682, 'order': 463749088103, 'index_calculus_result': 339524646304, 'index_calculus_time': 7.948910236358643, 'index_calculus_mem_mb': 0.7185287475585938}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 583966937092, 'order': 463749088103, 'index_calculus_result': 266076117689, 'index_calculus_time': 9.019835710525513, 'index_calculus_mem_mb': 0.753631591796875}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 561467357775, 'order': 463749088103, 'index_calculus_result': 391438782053, 'index_calculus_time': 9.9379403591156, 'index_calculus_mem_mb': 0.7118644714355469}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 119536817260, 'order': 463749088103, 'index_calculus_result': 450390698100, 'index_calculus_time': 10.091158151626587, 'index_calculus_mem_mb': 0.7644500732421875}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 717945443853, 'order': 463749088103, 'index_calculus_result': 408514110961, 'index_calculus_time': 11.115796089172363, 'index_calculus_mem_mb': 0.7815475463867188}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 549487593987, 'order': 463749088103, 'index_calculus_result': 113680326945, 'index_calculus_time': 9.553485870361328, 'index_calculus_mem_mb': 0.746826171875}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 712771495956, 'order': 463749088103, 'index_calculus_result': 257204212782, 'index_calculus_time': 8.82314419746399, 'index_calculus_mem_mb': 0.7104759216308594}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 610138234573, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 309691831346, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 536447843641, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 49792645106, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 740893925110, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 161280252702, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 374111065903, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 497138471980, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 765871206973, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 249095813770, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 796650194563, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 838148069292, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 914775046303, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 403165806233, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 636059396280, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 318899050832, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 632153291888, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 396790692224, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 93450326506, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 426689266895, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 103383932106, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 500323668849, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 721308426423, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 687773241887, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 496940174594, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 188141606728, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 789218394456, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 402887025817, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 669394930661, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 31864307328, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 638578777973, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 255104096146, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 398143113229, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 905495365284, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 70355297206, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 482618830432, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 100, 'beta': 752161625543, 'order': 463749088103}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 615619685866, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 165001640781, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 710075930326, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 711419418068, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 751817060977, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 629752129169, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 715442558506, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 765357528132, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 675306482066, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 911250701856, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 847350018046, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 326967234692, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 222620773174, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 230835377763, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 213000780622, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 60957574556, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 500928079807, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 735311364817, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 87336084083, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 847414327093, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 261063027996, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 270422086527, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 852390935056, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 810945623654, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 492905492874, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 523907557590, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 581750411867, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 757057899715, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 835189766782, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 404421041617, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 92560139393, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 542798700761, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 121160164573, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 302023866183, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 147814071951, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 422965822491, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 233915292382, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 573752690003, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 452382800614, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 332827612431, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 211028688570, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 2273744668, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 22007903245, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 383336923266, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 915231437510, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 254394429316, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 744531958849, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 267511676850, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 341635768500, 'order': 927498176206}
+{'bit_size': 40, 'p': 927498176207, 'alpha': 5, 'beta': 755421895786, 'order': 927498176206}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 2344566393258, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 3239275204954, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 4479162288861, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 9120494294587, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 5120916673735, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 3187931631450, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 3026077548710, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 7851397344461, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 2471069473306, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 7265175142269, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 4979069178359, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 8568230747552, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 7119971876501, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 4574247699152, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 8857634485043, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 3205286355825, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 9908285064915, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 1311967049690, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 4474190680355, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 3229224091594, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 2273897543601, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 7974138392371, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 2245675251956, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 8640540546199, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 925358150574, 'order': 5438132686350}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 663542292414, 'order': 5438132686350, 'index_calculus_result': 3033248599302, 'index_calculus_time': 17.630744218826294, 'index_calculus_mem_mb': 0.7971343994140625}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 1094444853181, 'order': 5438132686350, 'index_calculus_result': 1714626854003, 'index_calculus_time': 19.18201494216919, 'index_calculus_mem_mb': 0.7696380615234375}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 5978183906992, 'order': 5438132686350, 'index_calculus_result': 3302960494134, 'index_calculus_time': 18.317822456359863, 'index_calculus_mem_mb': 0.7804374694824219}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 2595393140725, 'order': 5438132686350, 'index_calculus_result': 4350530617872, 'index_calculus_time': 19.876129150390625, 'index_calculus_mem_mb': 0.7782402038574219}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 846342060223, 'order': 5438132686350, 'index_calculus_result': 4064507836068, 'index_calculus_time': 18.286768436431885, 'index_calculus_mem_mb': 0.7636604309082031}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 2429130708465, 'order': 5438132686350, 'index_calculus_result': 5430745351701, 'index_calculus_time': 18.22989845275879, 'index_calculus_mem_mb': 0.7762527465820312}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 5319632407423, 'order': 5438132686350, 'index_calculus_result': 5366419242912, 'index_calculus_time': 18.19091773033142, 'index_calculus_mem_mb': 0.7781295776367188}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 2972717469066, 'order': 5438132686350, 'index_calculus_result': 1592910282795, 'index_calculus_time': 18.966625452041626, 'index_calculus_mem_mb': 0.80194091796875}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 7398387613139, 'order': 5438132686350, 'index_calculus_result': 2920686438500, 'index_calculus_time': 17.782936334609985, 'index_calculus_mem_mb': 0.7829704284667969}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 4496802069459, 'order': 5438132686350, 'index_calculus_result': 1731424998022, 'index_calculus_time': 18.117515087127686, 'index_calculus_mem_mb': 0.76898193359375}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 55040646921, 'order': 5438132686350, 'index_calculus_result': 967990491863, 'index_calculus_time': 20.99920129776001, 'index_calculus_mem_mb': 0.7592506408691406}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 7046650757320, 'order': 5438132686350, 'index_calculus_result': 5092159961942, 'index_calculus_time': 17.112606048583984, 'index_calculus_mem_mb': 0.727569580078125}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 5200598939578, 'order': 5438132686350, 'index_calculus_result': 2827234382800, 'index_calculus_time': 17.37799096107483, 'index_calculus_mem_mb': 0.7870635986328125}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 917228446045, 'order': 5438132686350, 'index_calculus_result': 1254577276313, 'index_calculus_time': 18.859159231185913, 'index_calculus_mem_mb': 0.7537155151367188}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 9781205602716, 'order': 5438132686350, 'index_calculus_result': 1424816810806, 'index_calculus_time': 17.873300790786743, 'index_calculus_mem_mb': 0.7492904663085938}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 4212592103001, 'order': 5438132686350, 'index_calculus_result': 5350113021499, 'index_calculus_time': 21.52659845352173, 'index_calculus_mem_mb': 0.8129463195800781}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 1072029208867, 'order': 5438132686350, 'index_calculus_result': 3285543262669, 'index_calculus_time': 19.25603461265564, 'index_calculus_mem_mb': 0.7982101440429688}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 4142758511556, 'order': 5438132686350, 'index_calculus_result': 5342870530277, 'index_calculus_time': 18.34693670272827, 'index_calculus_mem_mb': 0.7603530883789062}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 3217430791602, 'order': 5438132686350, 'index_calculus_result': 3723778212241, 'index_calculus_time': 17.9599609375, 'index_calculus_mem_mb': 0.7592201232910156}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 2917599491846, 'order': 5438132686350, 'index_calculus_result': 3771367073350, 'index_calculus_time': 16.694119691848755, 'index_calculus_mem_mb': 0.8162651062011719}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 7467652036870, 'order': 5438132686350, 'index_calculus_result': 3011254728781, 'index_calculus_time': 20.251116037368774, 'index_calculus_mem_mb': 0.7703781127929688}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 4421648638868, 'order': 5438132686350, 'index_calculus_result': 4401141838244, 'index_calculus_time': 18.315021991729736, 'index_calculus_mem_mb': 0.8001480102539062}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 9085862179586, 'order': 5438132686350, 'index_calculus_result': 3729405684637, 'index_calculus_time': 17.133944511413574, 'index_calculus_mem_mb': 0.7559471130371094}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 437946101401, 'order': 5438132686350, 'index_calculus_result': 673954733443, 'index_calculus_time': 18.648685455322266, 'index_calculus_mem_mb': 0.775115966796875}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 91, 'beta': 9361543660500, 'order': 5438132686350, 'index_calculus_result': 1464252794326, 'index_calculus_time': 17.31691837310791, 'index_calculus_mem_mb': 0.8005447387695312}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 1719793964609, 'order': 10876265372700, 'index_calculus_result': 703385461445, 'index_calculus_time': 16.3576602935791, 'index_calculus_mem_mb': 0.78082275390625}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 9792928529775, 'order': 10876265372700, 'index_calculus_result': 2009352489625, 'index_calculus_time': 17.71029233932495, 'index_calculus_mem_mb': 0.8078536987304688}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 9119826180604, 'order': 10876265372700, 'index_calculus_result': 9343655652927, 'index_calculus_time': 16.540756464004517, 'index_calculus_mem_mb': 0.802764892578125}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 9917201047368, 'order': 10876265372700, 'index_calculus_result': 5235546614616, 'index_calculus_time': 18.623417854309082, 'index_calculus_mem_mb': 0.7482414245605469}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 7418307557147, 'order': 10876265372700, 'index_calculus_result': 6288188097906, 'index_calculus_time': 18.83137822151184, 'index_calculus_mem_mb': 0.7707557678222656}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 8331259671208, 'order': 10876265372700, 'index_calculus_result': 4936852874075, 'index_calculus_time': 19.943737030029297, 'index_calculus_mem_mb': 0.7978591918945312}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 6700906952696, 'order': 10876265372700, 'index_calculus_result': 5867592821542, 'index_calculus_time': 18.568341732025146, 'index_calculus_mem_mb': 0.7850151062011719}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 8118368497238, 'order': 10876265372700, 'index_calculus_result': 6797169255346, 'index_calculus_time': 16.40784192085266, 'index_calculus_mem_mb': 0.7420234680175781}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 805447870105, 'order': 10876265372700, 'index_calculus_result': 2953400809785, 'index_calculus_time': 18.293251991271973, 'index_calculus_mem_mb': 0.8043441772460938}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 853613594603, 'order': 10876265372700, 'index_calculus_result': 5119941160692, 'index_calculus_time': 15.964014530181885, 'index_calculus_mem_mb': 0.7872810363769531}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 604862386229, 'order': 10876265372700, 'index_calculus_result': 8767330551855, 'index_calculus_time': 16.34083580970764, 'index_calculus_mem_mb': 0.7652473449707031}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 8782228394281, 'order': 10876265372700, 'index_calculus_result': 9557099955438, 'index_calculus_time': 16.77811598777771, 'index_calculus_mem_mb': 0.7660675048828125}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 6724031050944, 'order': 10876265372700, 'index_calculus_result': 2147984482654, 'index_calculus_time': 17.57485055923462, 'index_calculus_mem_mb': 0.7951278686523438}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 8922257443194, 'order': 10876265372700, 'index_calculus_result': 6979605334916, 'index_calculus_time': 16.48349928855896, 'index_calculus_mem_mb': 0.7873382568359375}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 822430683290, 'order': 10876265372700, 'index_calculus_result': 4245587895760, 'index_calculus_time': 16.47550630569458, 'index_calculus_mem_mb': 0.7559776306152344}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 8942490094154, 'order': 10876265372700, 'index_calculus_result': 4119574818289, 'index_calculus_time': 20.113367319107056, 'index_calculus_mem_mb': 0.7749481201171875}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 5585706287017, 'order': 10876265372700, 'index_calculus_result': 3183414298579, 'index_calculus_time': 15.67885947227478, 'index_calculus_mem_mb': 0.7605857849121094}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 8699006164707, 'order': 10876265372700, 'index_calculus_result': 2276349099241, 'index_calculus_time': 15.99054765701294, 'index_calculus_mem_mb': 0.7744026184082031}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 3415173701044, 'order': 10876265372700, 'index_calculus_result': 1962620305183, 'index_calculus_time': 17.19613242149353, 'index_calculus_mem_mb': 0.7823295593261719}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 5045062581809, 'order': 10876265372700, 'index_calculus_result': 3527211200611, 'index_calculus_time': 16.22667169570923, 'index_calculus_mem_mb': 0.7576484680175781}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 5713449008286, 'order': 10876265372700, 'index_calculus_result': 7394797092413, 'index_calculus_time': 16.95110511779785, 'index_calculus_mem_mb': 0.7706375122070312}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 10869754039067, 'order': 10876265372700, 'index_calculus_result': 7705903499021, 'index_calculus_time': 17.357997179031372, 'index_calculus_mem_mb': 0.7509040832519531}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 7200523217984, 'order': 10876265372700, 'index_calculus_result': 809881764865, 'index_calculus_time': 18.340529918670654, 'index_calculus_mem_mb': 0.7931747436523438}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 7998048996645, 'order': 10876265372700, 'index_calculus_result': 6633445370768, 'index_calculus_time': 17.661319494247437, 'index_calculus_mem_mb': 0.7703971862792969}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 7274665111460, 'order': 10876265372700, 'index_calculus_result': 10486668609097, 'index_calculus_time': 16.41857671737671, 'index_calculus_mem_mb': 0.794769287109375}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 2639859462993, 'order': 10876265372700, 'index_calculus_result': 5820805597916, 'index_calculus_time': 16.909258604049683, 'index_calculus_mem_mb': 0.7660598754882812}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 19333344814, 'order': 10876265372700, 'index_calculus_result': 5589640879311, 'index_calculus_time': 23.031396865844727, 'index_calculus_mem_mb': 0.7763862609863281}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 2323666000411, 'order': 10876265372700, 'index_calculus_result': 8880581839306, 'index_calculus_time': 19.32706880569458, 'index_calculus_mem_mb': 0.7614364624023438}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 5907043730031, 'order': 10876265372700, 'index_calculus_result': 4603896651705, 'index_calculus_time': 17.780425310134888, 'index_calculus_mem_mb': 0.7926864624023438}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 1972394468510, 'order': 10876265372700, 'index_calculus_result': 1841380448905, 'index_calculus_time': 16.6325421333313, 'index_calculus_mem_mb': 0.7496795654296875}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 9434048920303, 'order': 10876265372700, 'index_calculus_result': 5152191788979, 'index_calculus_time': 18.38507342338562, 'index_calculus_mem_mb': 0.8028793334960938}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 6825285115097, 'order': 10876265372700, 'index_calculus_result': 164307389871, 'index_calculus_time': 18.457213640213013, 'index_calculus_mem_mb': 0.7798576354980469}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 7119805296588, 'order': 10876265372700, 'index_calculus_result': 10387357605088, 'index_calculus_time': 17.993807315826416, 'index_calculus_mem_mb': 0.758697509765625}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 4022410833971, 'order': 10876265372700, 'index_calculus_result': 9134958203661, 'index_calculus_time': 16.944011926651, 'index_calculus_mem_mb': 0.7587318420410156}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 935301054692, 'order': 10876265372700, 'index_calculus_result': 1023464895813, 'index_calculus_time': 17.71059012413025, 'index_calculus_mem_mb': 0.7654685974121094}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 10793286904499, 'order': 10876265372700, 'index_calculus_result': 799728850732, 'index_calculus_time': 19.957622289657593, 'index_calculus_mem_mb': 0.79144287109375}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 1368289032541, 'order': 10876265372700, 'index_calculus_result': 4151837461577, 'index_calculus_time': 18.25680112838745, 'index_calculus_mem_mb': 0.7576522827148438}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 10028310610848, 'order': 10876265372700, 'index_calculus_result': 6099284250237, 'index_calculus_time': 21.582740545272827, 'index_calculus_mem_mb': 0.7853202819824219}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 9015265281196, 'order': 10876265372700, 'index_calculus_result': 5951388385576, 'index_calculus_time': 22.354332208633423, 'index_calculus_mem_mb': 0.7929344177246094}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 2251766010774, 'order': 10876265372700, 'index_calculus_result': 255013304142, 'index_calculus_time': 18.48400592803955, 'index_calculus_mem_mb': 0.775360107421875}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 1315648025662, 'order': 10876265372700, 'index_calculus_result': 10053471223667, 'index_calculus_time': 16.954897165298462, 'index_calculus_mem_mb': 0.7670516967773438}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 1737517205129, 'order': 10876265372700, 'index_calculus_result': 9440829943564, 'index_calculus_time': 17.42744016647339, 'index_calculus_mem_mb': 0.7810325622558594}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 6793088352626, 'order': 10876265372700, 'index_calculus_result': 161602293755, 'index_calculus_time': 15.801619052886963, 'index_calculus_mem_mb': 0.7588157653808594}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 589279123289, 'order': 10876265372700, 'index_calculus_result': 8404922138361, 'index_calculus_time': 16.181184768676758, 'index_calculus_mem_mb': 0.761962890625}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 187949437554, 'order': 10876265372700, 'index_calculus_result': 10379807732680, 'index_calculus_time': 16.60297989845276, 'index_calculus_mem_mb': 0.7421112060546875}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 8178460931465, 'order': 10876265372700, 'index_calculus_result': 3191620929133, 'index_calculus_time': 15.162029266357422, 'index_calculus_mem_mb': 0.7967262268066406}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 7877990631907, 'order': 10876265372700, 'index_calculus_result': 2586048269239, 'index_calculus_time': 16.726011753082275, 'index_calculus_mem_mb': 0.759124755859375}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 2107723734348, 'order': 10876265372700, 'index_calculus_result': 2352334687892, 'index_calculus_time': 16.582000017166138, 'index_calculus_mem_mb': 0.7580070495605469}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 1451968869802, 'order': 10876265372700, 'index_calculus_result': 1597503874316, 'index_calculus_time': 16.74299907684326, 'index_calculus_mem_mb': 0.7602691650390625}
+{'bit_size': 44, 'p': 10876265372701, 'alpha': 2, 'beta': 219652143181, 'order': 10876265372700, 'index_calculus_result': 5207929386386, 'index_calculus_time': 16.69499921798706, 'index_calculus_mem_mb': 0.7600746154785156}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 59398595592256, 'order': 74941625383463, 'index_calculus_result': 32239190706826, 'index_calculus_time': 43.59800052642822, 'index_calculus_mem_mb': 0.8091316223144531}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 90211689734312, 'order': 74941625383463, 'index_calculus_result': 24466119073603, 'index_calculus_time': 38.56401300430298, 'index_calculus_mem_mb': 0.8385124206542969}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 127023714382877, 'order': 74941625383463, 'index_calculus_result': 2152271475384, 'index_calculus_time': 40.59799885749817, 'index_calculus_mem_mb': 0.7966995239257812}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 110524618523893, 'order': 74941625383463, 'index_calculus_result': 1319021491625, 'index_calculus_time': 37.574000120162964, 'index_calculus_mem_mb': 0.7769393920898438}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 20695102552419, 'order': 74941625383463, 'index_calculus_result': 20388943572091, 'index_calculus_time': 39.83299922943115, 'index_calculus_mem_mb': 0.7917251586914062}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 50889997020647, 'order': 74941625383463, 'index_calculus_result': 44304862319861, 'index_calculus_time': 43.664000272750854, 'index_calculus_mem_mb': 0.8161163330078125}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 68711002936307, 'order': 74941625383463, 'index_calculus_result': 60907424629170, 'index_calculus_time': 40.11199951171875, 'index_calculus_mem_mb': 0.7665481567382812}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 47729928197509, 'order': 74941625383463, 'index_calculus_result': 69642530868698, 'index_calculus_time': 40.68499946594238, 'index_calculus_mem_mb': 0.798187255859375}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 91799193105104, 'order': 74941625383463, 'index_calculus_result': 69339009189291, 'index_calculus_time': 38.360000133514404, 'index_calculus_mem_mb': 0.7740249633789062}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 132609770327729, 'order': 74941625383463, 'index_calculus_result': 339393614926, 'index_calculus_time': 41.46199893951416, 'index_calculus_mem_mb': 0.8079910278320312}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 128915162639871, 'order': 74941625383463, 'index_calculus_result': 18115389664016, 'index_calculus_time': 42.85255575180054, 'index_calculus_mem_mb': 0.7981224060058594}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 41978949479761, 'order': 74941625383463, 'index_calculus_result': 29787050849989, 'index_calculus_time': 40.33201313018799, 'index_calculus_mem_mb': 0.8149871826171875}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 83790749989545, 'order': 74941625383463, 'index_calculus_result': 26577102188371, 'index_calculus_time': 40.46901178359985, 'index_calculus_mem_mb': 0.8465728759765625}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 98354567421451, 'order': 74941625383463, 'index_calculus_result': 32169396395806, 'index_calculus_time': 37.6612446308136, 'index_calculus_mem_mb': 0.8100318908691406}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 99365805873853, 'order': 74941625383463, 'index_calculus_result': 72334369387505, 'index_calculus_time': 42.735777616500854, 'index_calculus_mem_mb': 0.8117828369140625}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 37249060362072, 'order': 74941625383463, 'index_calculus_result': 51203286250953, 'index_calculus_time': 40.3776650428772, 'index_calculus_mem_mb': 0.8184661865234375}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 73365977245365, 'order': 74941625383463, 'index_calculus_result': 71870788073753, 'index_calculus_time': 39.52294111251831, 'index_calculus_mem_mb': 0.8186569213867188}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 12619074304605, 'order': 74941625383463, 'index_calculus_result': 7239422862623, 'index_calculus_time': 39.25412058830261, 'index_calculus_mem_mb': 0.8451614379882812}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 40902499546164, 'order': 74941625383463, 'index_calculus_result': 39201386911579, 'index_calculus_time': 45.8788206577301, 'index_calculus_mem_mb': 0.8198318481445312}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 50486782309128, 'order': 74941625383463, 'index_calculus_result': 14727581502409, 'index_calculus_time': 39.97520637512207, 'index_calculus_mem_mb': 0.7975616455078125}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 84924603505365, 'order': 74941625383463, 'index_calculus_result': 57326271153956, 'index_calculus_time': 43.07453513145447, 'index_calculus_mem_mb': 0.7923812866210938}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 25315720850079, 'order': 74941625383463, 'index_calculus_result': 64663623229753, 'index_calculus_time': 41.39432096481323, 'index_calculus_mem_mb': 0.7980804443359375}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 142875223229210, 'order': 74941625383463, 'index_calculus_result': 29628851384606, 'index_calculus_time': 41.25441074371338, 'index_calculus_mem_mb': 0.815521240234375}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 17607541975434, 'order': 74941625383463, 'index_calculus_result': 19673696136030, 'index_calculus_time': 41.78372597694397, 'index_calculus_mem_mb': 0.7902908325195312}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 118043050418094, 'order': 74941625383463, 'index_calculus_result': 26976595706897, 'index_calculus_time': 39.72360324859619, 'index_calculus_mem_mb': 0.7703285217285156}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 80132799326249, 'order': 74941625383463, 'index_calculus_result': 58256717301994, 'index_calculus_time': 42.31173896789551, 'index_calculus_mem_mb': 0.8081932067871094}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 25077469692590, 'order': 74941625383463, 'index_calculus_result': 19431428617856, 'index_calculus_time': 44.70560812950134, 'index_calculus_mem_mb': 0.8024787902832031}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 90354622760536, 'order': 74941625383463, 'index_calculus_result': 16075497444973, 'index_calculus_time': 40.560258626937866, 'index_calculus_mem_mb': 0.8176383972167969}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 56910323697086, 'order': 74941625383463, 'index_calculus_result': 11094892613434, 'index_calculus_time': 44.52468729019165, 'index_calculus_mem_mb': 0.8448905944824219}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 8018878625638, 'order': 74941625383463, 'index_calculus_result': 5570112046220, 'index_calculus_time': 42.0267767906189, 'index_calculus_mem_mb': 0.8135147094726562}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 138450220374069, 'order': 74941625383463, 'index_calculus_result': 30932481784655, 'index_calculus_time': 42.843749046325684, 'index_calculus_mem_mb': 0.8086051940917969}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 76235516642748, 'order': 74941625383463, 'index_calculus_result': 67498091199574, 'index_calculus_time': 46.75675988197327, 'index_calculus_mem_mb': 0.8453178405761719}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 103344952081573, 'order': 74941625383463, 'index_calculus_result': 52070546481722, 'index_calculus_time': 40.706827878952026, 'index_calculus_mem_mb': 0.8135032653808594}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 24105499145887, 'order': 74941625383463, 'index_calculus_result': 72579095060831, 'index_calculus_time': 45.95397639274597, 'index_calculus_mem_mb': 0.8019523620605469}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 135747071246193, 'order': 74941625383463, 'index_calculus_result': 72568712146184, 'index_calculus_time': 40.171884298324585, 'index_calculus_mem_mb': 0.7605743408203125}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 97389322368571, 'order': 74941625383463, 'index_calculus_result': 55350890443587, 'index_calculus_time': 46.02770972251892, 'index_calculus_mem_mb': 0.786041259765625}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 142730244741020, 'order': 74941625383463, 'index_calculus_result': 19410799848380, 'index_calculus_time': 42.92188549041748, 'index_calculus_mem_mb': 0.8051490783691406}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 13482007700988, 'order': 74941625383463, 'index_calculus_result': 24812128791738, 'index_calculus_time': 42.64486503601074, 'index_calculus_mem_mb': 0.8099441528320312}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 3186591344725, 'order': 74941625383463, 'index_calculus_result': 29093653646107, 'index_calculus_time': 39.67449140548706, 'index_calculus_mem_mb': 0.8027229309082031}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 81154359056733, 'order': 74941625383463, 'index_calculus_result': 48584966784637, 'index_calculus_time': 37.92188572883606, 'index_calculus_mem_mb': 0.7700004577636719}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 89061806328050, 'order': 74941625383463, 'index_calculus_result': 56273370141505, 'index_calculus_time': 42.06376504898071, 'index_calculus_mem_mb': 0.8050880432128906}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 58335569039598, 'order': 74941625383463, 'index_calculus_result': 67011011235330, 'index_calculus_time': 45.5781352519989, 'index_calculus_mem_mb': 0.7899971008300781}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 62221114362344, 'order': 74941625383463, 'index_calculus_result': 47962235047009, 'index_calculus_time': 43.328136682510376, 'index_calculus_mem_mb': 0.7973175048828125}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 148887376925078, 'order': 74941625383463, 'index_calculus_result': 44830811334591, 'index_calculus_time': 37.43751096725464, 'index_calculus_mem_mb': 0.7807502746582031}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 9105390746278, 'order': 74941625383463, 'index_calculus_result': 48201528738109, 'index_calculus_time': 44.53126096725464, 'index_calculus_mem_mb': 0.8196296691894531}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 39813276982678, 'order': 74941625383463, 'index_calculus_result': 38692977148379, 'index_calculus_time': 39.40626120567322, 'index_calculus_mem_mb': 0.7962455749511719}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 94623629181859, 'order': 74941625383463, 'index_calculus_result': 20709338913758, 'index_calculus_time': 42.4375102519989, 'index_calculus_mem_mb': 0.8127403259277344}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 63930405578191, 'order': 74941625383463, 'index_calculus_result': 21348892993411, 'index_calculus_time': 37.296886920928955, 'index_calculus_mem_mb': 0.8082427978515625}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 90376031947506, 'order': 74941625383463, 'index_calculus_result': 7995131371072, 'index_calculus_time': 42.156261682510376, 'index_calculus_mem_mb': 0.7816848754882812}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 100, 'beta': 14494018234464, 'order': 74941625383463, 'index_calculus_result': 50493144014314, 'index_calculus_time': 40.20313596725464, 'index_calculus_mem_mb': 0.8024711608886719}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 7903916292458, 'order': 149883250766926, 'index_calculus_result': 33424354302881, 'index_calculus_time': 39.42384386062622, 'index_calculus_mem_mb': 0.8113822937011719}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 48403729572113, 'order': 149883250766926, 'index_calculus_result': 35599193918409, 'index_calculus_time': 39.9697105884552, 'index_calculus_mem_mb': 0.8179779052734375}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 30771254499686, 'order': 149883250766926, 'index_calculus_result': 132755652785049, 'index_calculus_time': 41.575303077697754, 'index_calculus_mem_mb': 0.7690773010253906}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 46358777554927, 'order': 149883250766926, 'index_calculus_result': 36362220940740, 'index_calculus_time': 44.651100635528564, 'index_calculus_mem_mb': 0.8162727355957031}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 101872617494410, 'order': 149883250766926, 'index_calculus_result': 117172742093295, 'index_calculus_time': 40.02809524536133, 'index_calculus_mem_mb': 0.8138351440429688}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 35702769776377, 'order': 149883250766926, 'index_calculus_result': 113828469534836, 'index_calculus_time': 40.06780648231506, 'index_calculus_mem_mb': 0.8304252624511719}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 48586873920531, 'order': 149883250766926, 'index_calculus_result': 143964919159303, 'index_calculus_time': 43.46687865257263, 'index_calculus_mem_mb': 0.7944679260253906}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 94262043357647, 'order': 149883250766926, 'index_calculus_result': 45713574834447, 'index_calculus_time': 43.7365825176239, 'index_calculus_mem_mb': 0.8243179321289062}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 73959502522418, 'order': 149883250766926, 'index_calculus_result': 60852798737797, 'index_calculus_time': 44.39806246757507, 'index_calculus_mem_mb': 0.8196640014648438}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 61123025573741, 'order': 149883250766926, 'index_calculus_result': 47339341249255, 'index_calculus_time': 43.0175461769104, 'index_calculus_mem_mb': 0.8193435668945312}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 54877678661303, 'order': 149883250766926, 'index_calculus_result': 148430725204220, 'index_calculus_time': 42.679802894592285, 'index_calculus_mem_mb': 0.8081741333007812}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 128564852811263, 'order': 149883250766926, 'index_calculus_result': 127721638677430, 'index_calculus_time': 42.68515419960022, 'index_calculus_mem_mb': 0.8187904357910156}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 86203221634624, 'order': 149883250766926, 'index_calculus_result': 14135129759030, 'index_calculus_time': 38.96956515312195, 'index_calculus_mem_mb': 0.8125114440917969}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 70023522704049, 'order': 149883250766926, 'index_calculus_result': 9243452825414, 'index_calculus_time': 37.19581317901611, 'index_calculus_mem_mb': 0.8276405334472656}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 92325778452496, 'order': 149883250766926, 'index_calculus_result': 44735997992645, 'index_calculus_time': 41.860060930252075, 'index_calculus_mem_mb': 0.7975311279296875}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 102318755497250, 'order': 149883250766926, 'index_calculus_result': 69150927950468, 'index_calculus_time': 40.339762926101685, 'index_calculus_mem_mb': 0.8242950439453125}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 38902781703553, 'order': 149883250766926, 'index_calculus_result': 123104966107911, 'index_calculus_time': 38.2621533870697, 'index_calculus_mem_mb': 0.8184318542480469}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 122948821180048, 'order': 149883250766926, 'index_calculus_result': 149332289028379, 'index_calculus_time': 39.79867196083069, 'index_calculus_mem_mb': 0.7754020690917969}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 1579898749537, 'order': 149883250766926, 'index_calculus_result': 10292614253847, 'index_calculus_time': 43.25626468658447, 'index_calculus_mem_mb': 0.8112602233886719}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 47312132642892, 'order': 149883250766926, 'index_calculus_result': 44196507870327, 'index_calculus_time': 38.34393906593323, 'index_calculus_mem_mb': 0.8019218444824219}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 10282636542879, 'order': 149883250766926, 'index_calculus_result': 148202545567257, 'index_calculus_time': 44.0755729675293, 'index_calculus_mem_mb': 0.8377456665039062}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 96390423513310, 'order': 149883250766926, 'index_calculus_result': 141463841996082, 'index_calculus_time': 41.664711713790894, 'index_calculus_mem_mb': 0.7519378662109375}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 138608687738336, 'order': 149883250766926, 'index_calculus_result': 40117685549353, 'index_calculus_time': 42.13364911079407, 'index_calculus_mem_mb': 0.8081855773925781}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 69732879448606, 'order': 149883250766926, 'index_calculus_result': 129960793800295, 'index_calculus_time': 42.985339641571045, 'index_calculus_mem_mb': 0.8039627075195312}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 114528262571032, 'order': 149883250766926, 'index_calculus_result': 14382675721181, 'index_calculus_time': 38.393765449523926, 'index_calculus_mem_mb': 0.8083572387695312}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 14671188157719, 'order': 149883250766926, 'index_calculus_result': 54229958849622, 'index_calculus_time': 40.3771550655365, 'index_calculus_mem_mb': 0.7761764526367188}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 46257622457837, 'order': 149883250766926, 'index_calculus_result': 142011762565971, 'index_calculus_time': 43.788575649261475, 'index_calculus_mem_mb': 0.8333549499511719}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 100601388273271, 'order': 149883250766926, 'index_calculus_result': 26516826918855, 'index_calculus_time': 41.39332675933838, 'index_calculus_mem_mb': 0.8275375366210938}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 40721676614112, 'order': 149883250766926, 'index_calculus_result': 130602068935883, 'index_calculus_time': 47.15959119796753, 'index_calculus_mem_mb': 0.85040283203125}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 145877851017229, 'order': 149883250766926, 'index_calculus_result': 141772695024654, 'index_calculus_time': 38.28334951400757, 'index_calculus_mem_mb': 0.78326416015625}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 54788418317297, 'order': 149883250766926, 'index_calculus_result': 76597146894883, 'index_calculus_time': 41.36527967453003, 'index_calculus_mem_mb': 0.7913665771484375}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 23574600092895, 'order': 149883250766926, 'index_calculus_result': 111219451606619, 'index_calculus_time': 39.57734274864197, 'index_calculus_mem_mb': 0.7662315368652344}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 42256326149303, 'order': 149883250766926, 'index_calculus_result': 148291303978703, 'index_calculus_time': 39.650551557540894, 'index_calculus_mem_mb': 0.7863311767578125}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 50775691300284, 'order': 149883250766926, 'index_calculus_result': 137849543141296, 'index_calculus_time': 38.41953444480896, 'index_calculus_mem_mb': 0.8131790161132812}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 37709960767541, 'order': 149883250766926, 'index_calculus_result': 116861409933375, 'index_calculus_time': 39.43313217163086, 'index_calculus_mem_mb': 0.818023681640625}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 7277134080272, 'order': 149883250766926, 'index_calculus_result': 112594645343453, 'index_calculus_time': 40.96549987792969, 'index_calculus_mem_mb': 0.8460807800292969}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 6497445380780, 'order': 149883250766926, 'index_calculus_result': 1969595551673, 'index_calculus_time': 39.06377959251404, 'index_calculus_mem_mb': 0.8202552795410156}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 70928486880394, 'order': 149883250766926, 'index_calculus_result': 64971009238736, 'index_calculus_time': 41.25659775733948, 'index_calculus_mem_mb': 0.7711601257324219}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 15988507564365, 'order': 149883250766926, 'index_calculus_result': 13335302830212, 'index_calculus_time': 41.02434062957764, 'index_calculus_mem_mb': 0.796539306640625}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 148202780422844, 'order': 149883250766926, 'index_calculus_result': 79007362466293, 'index_calculus_time': 40.65928101539612, 'index_calculus_mem_mb': 0.8279609680175781}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 136764712445586, 'order': 149883250766926, 'index_calculus_result': 107108237469258, 'index_calculus_time': 38.88495135307312, 'index_calculus_mem_mb': 0.8597793579101562}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 106666989393894, 'order': 149883250766926, 'index_calculus_result': 16974085626391, 'index_calculus_time': 41.454530000686646, 'index_calculus_mem_mb': 0.8145904541015625}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 66314917130576, 'order': 149883250766926, 'index_calculus_result': 32137513818525, 'index_calculus_time': 48.18771696090698, 'index_calculus_mem_mb': 0.7752532958984375}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 63627689626049, 'order': 149883250766926, 'index_calculus_result': 109103163322471, 'index_calculus_time': 39.625656843185425, 'index_calculus_mem_mb': 0.8180770874023438}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 876842224719, 'order': 149883250766926, 'index_calculus_result': 47301735673191, 'index_calculus_time': 40.03693222999573, 'index_calculus_mem_mb': 0.7916603088378906}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 113559220313835, 'order': 149883250766926, 'index_calculus_result': 54451841235673, 'index_calculus_time': 40.96785044670105, 'index_calculus_mem_mb': 0.7597618103027344}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 72578473462537, 'order': 149883250766926, 'index_calculus_result': 35139749861594, 'index_calculus_time': 38.02784705162048, 'index_calculus_mem_mb': 0.8078651428222656}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 88452856806314, 'order': 149883250766926, 'index_calculus_result': 76365466081511, 'index_calculus_time': 40.21285343170166, 'index_calculus_mem_mb': 0.8131294250488281}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 72667206716314, 'order': 149883250766926, 'index_calculus_result': 51255779630396, 'index_calculus_time': 37.385130882263184, 'index_calculus_mem_mb': 0.8020057678222656}
+{'bit_size': 48, 'p': 149883250766927, 'alpha': 5, 'beta': 140886369614225, 'order': 149883250766926, 'index_calculus_result': 62966259737022, 'index_calculus_time': 45.1329779624939, 'index_calculus_mem_mb': 0.8513603210449219}
+{'bit_size': 52, 'p': 2523751089304763, 'alpha': 100, 'beta': 2055776705315195, 'order': 1261875544652381, 'index_calculus_result': 808913896807271, 'index_calculus_time': 129.68365383148193, 'index_calculus_mem_mb': 0.8526115417480469}
+{'bit_size': 52, 'p': 2523751089304763, 'alpha': 100, 'beta': 2459203322182073, 'order': 1261875544652381, 'index_calculus_result': 433772774152612, 'index_calculus_time': 115.31067490577698, 'index_calculus_mem_mb': 0.8520317077636719}
+{'bit_size': 52, 'p': 2523751089304763, 'alpha': 100, 'beta': 863731325142136, 'order': 1261875544652381, 'index_calculus_result': 1083433763135814, 'index_calculus_time': 121.9676365852356, 'index_calculus_mem_mb': 0.8418693542480469}
+{'bit_size': 52, 'p': 2523751089304763, 'alpha': 100, 'beta': 288035165361270, 'order': 1261875544652381, 'index_calculus_result': 161553571761808, 'index_calculus_time': 121.31909132003784, 'index_calculus_mem_mb': 0.8387603759765625}
+{'bit_size': 52, 'p': 2523751089304763, 'alpha': 100, 'beta': 1883884187838528, 'order': 1261875544652381, 'index_calculus_result': 515840464656120, 'index_calculus_time': 121.1152241230011, 'index_calculus_mem_mb': 0.8147239685058594}
+{'bit_size': 52, 'p': 2523751089304763, 'alpha': 100, 'beta': 2318954454030066, 'order': 1261875544652381, 'index_calculus_result': 805105845235791, 'index_calculus_time': 112.34282159805298, 'index_calculus_mem_mb': 0.8329582214355469}
+{'bit_size': 52, 'p': 2523751089304763, 'alpha': 100, 'beta': 390151171960, 'order': 1261875544652381, 'index_calculus_result': 661173768458691, 'index_calculus_time': 123.34838247299194, 'index_calculus_mem_mb': 0.8195457458496094}
+{'bit_size': 52, 'p': 2523751089304763, 'alpha': 100, 'beta': 1836830012600447, 'order': 1261875544652381, 'index_calculus_result': 976390182702787, 'index_calculus_time': 122.83898782730103, 'index_calculus_mem_mb': 0.8134498596191406}
