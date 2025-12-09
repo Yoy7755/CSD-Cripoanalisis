@@ -26,46 +26,97 @@ def babyStepGiantStep(p: int, alfa: int, beta: int, order: int ,timeout = 34600)
 
     return
 
-def pollardRho(n:int, alpha:int, beta:int, o:int, timeout: float = 345600.0) -> Optional[int]:
+def pollardRho(n: int, alpha: int, beta: int, order: int, timeout: float = 345600.0) -> Optional[int]:
+    """
+    Algoritmo Pollard's Rho para Logaritmo Discreto corregido.
+    n: módulo p (donde ocurre la operación principal)
+    alpha: generador
+    beta: valor objetivo (alpha^x = beta mod n)
+    order: orden del subgrupo (importante para las operaciones en los exponentes)
+    """
     start_time = time.time()
-    A = B = AA = BB = 0
-    X = XX = 1
 
-    def f(x, a, b, n_mod, order):
-        partition = x % 3
-        
-        if partition == 1: 
-            
-            x_new = (beta * x) % n_mod
-            a_new = a
-            b_new = (b + 1) % order
-            
-        elif partition == 0: 
-            
-            x_new = pow(x, 2, n_mod)
-            a_new = (2 * a) % order
-            b_new = (2 * b) % order
-            
-        else: 
-            
-            x_new = (alpha * x) % n_mod
-            a_new = (a + 1) % order
-            b_new = b 
-            
-        return x_new, a_new, b_new
+    def f(x, a, b):
+        """Función de iteración estándar dividida en 3 conjuntos."""
+        subset = x % 3
+        if subset == 0:
+            # S0: x -> x*x
+            new_x = (x * x) % n
+            new_a = (a * 2) % order
+            new_b = (b * 2) % order
+        elif subset == 1:
+            # S1: x -> beta*x
+            new_x = (x * beta) % n
+            new_a = a
+            new_b = (b + 1) % order
+        else:
+            # S2: x -> alpha*x
+            new_x = (x * alpha) % n
+            new_a = (a + 1) % order
+            new_b = b
+        return new_x, new_a, new_b
 
+    # Bucle principal para reintentar con diferentes semillas si falla
     while time.time() - start_time < timeout:
-        X, A, B = f(X, A, B, n, o)
-        XX, AA, BB = f(XX, AA, BB, n, o)
-        XX, AA, BB = f(XX, AA, BB, n, o)
-        p = gcd(B-BB,o)
+        # 1. Inicialización aleatoria (Evita ciclos degenerados fijos)
+        a = randrange(0, order)
+        b = randrange(0, order)
+        x = (pow(alpha, a, n) * pow(beta, b, n)) % n
+        
+        # Copias para la "tortuga" y la "liebre"
+        X, A, B = x, a, b
+        XX, AA, BB = x, a, b
 
-        if X == XX: 
-            if p != 1: return None 
-            try:
-                return (AA - A)*pow(B - BB, -1, o) % o
-            except ValueError:
-                return None
+        # 2. Ciclo de Floyd (Tortuga y Liebre)
+        for _ in range(order): # Límite de seguridad para evitar bucles infinitos
+            if time.time() - start_time > timeout: return None
+            
+            # Tortuga avanza 1 paso
+            X, A, B = f(X, A, B)
+            
+            # Liebre avanza 2 pasos
+            XX, AA, BB = f(XX, AA, BB)
+            XX, AA, BB = f(XX, AA, BB)
+
+            # 3. Detección de colisión
+            if X == XX:
+                # Ecuación: alpha^A * beta^B = alpha^AA * beta^BB (mod n)
+                # Tomando logs: A + x*B = AA + x*BB (mod order)
+                # Simplificando: x * (B - BB) = (AA - A) (mod order)
+                
+                delta_b = (B - BB) % order
+                delta_a = (AA - A) % order
+                
+                g = gcd(delta_b, order)
+                
+                if g == 1:
+                    # Caso simple: existe un único inverso
+                    try:
+                        inv = pow(delta_b, -1, order)
+                        return (delta_a * inv) % order
+                    except ValueError:
+                        break # Fallo raro, reintentar loop externo
+                else:
+                    # Caso complejo: GCD > 1.
+                    # La ecuación lineal ax = b (mod m) tiene soluciones si b es divisible por g.
+                    if delta_a % g == 0:
+                        # Simplificamos la ecuación dividiendo todo por g
+                        # x * (delta_b/g) = (delta_a/g) (mod order/g)
+                        try:
+                            inv = pow(delta_b // g, -1, order // g)
+                            res = (delta_a // g * inv) % (order // g)
+                            
+                            # Hay g soluciones posibles, probamos cuál es la correcta
+                            for k in range(g):
+                                candidate = res + k * (order // g)
+                                if pow(alpha, candidate, n) == beta:
+                                    return candidate
+                        except ValueError:
+                            pass # Continuar buscando
+                
+                # Si llegamos aquí, la colisión no sirvió (ej: 0=0), reiniciamos con nuevos a, b
+                break 
+                
     return None
 
 def _get_primes(limit: int) -> List[int]:
@@ -346,9 +397,6 @@ def resolver_dlp(filename: str, outfile: str, algorithms: list, timeout: float =
                 future_to_algo = {}
                 
                 for algo_name in algorithms:
-                    if algo_name == 'baby' and n_bits > 50:
-                        print(f"Saltando BSGS para {n_bits} bits (riesgo memoria).")
-                        continue
                     if algo_name in ALGORITMOS:
                         future = executor.submit(run_method, algo_name, p, alpha, beta, order, timeout)
                         future_to_algo[future] = algo_name
