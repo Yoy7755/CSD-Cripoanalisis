@@ -162,7 +162,11 @@ class Point:
 # (Funciona bien con primos próximos entre sí)
 def Fermat(n:int, timeout: float = 345600.0) -> Optional[Tuple[int, int]]:
     start_time = time.time()
+    if n % 2 == 0:
+        return (2, n // 2)
     A = math.isqrt(n)
+    if A * A < n:
+        A += 1
     B = A*A - n
     while time.time() - start_time < timeout:
         Bi = math.isqrt(B)

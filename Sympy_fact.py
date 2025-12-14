@@ -3,6 +3,7 @@ from random import randrange
 from numpy import mod
 import time
 import threading
+import tracemalloc
 import os 
 import concurrent.futures
 from typing import List, Tuple, Optional
@@ -35,19 +36,15 @@ def leer_fichero(filename: str) -> List[Tuple[int, int]]:
 
 def factorizar(filename: str, outfile: str, timeout: float = 3600.0):
     """
-    Correr en paralelo los diferentes métodos
+    Correr en paralelo los diferentes métodos y rastrear memoria.
     
     Args:
         filename (str): Path del fichero
+        outfile (str): Path del fichero de salida
         timeout (float): Timeout para cada método
     """
+    # Assuming leer_fichero and qs are defined elsewhere in your scope
     challenges = leer_fichero(filename)
-    
-    def run_method(method, number):
-        start_time = time.time()
-        factor = method(number)
-        end_time = time.time()
-        return factor, end_time - start_time
     
     class RunWithTimeout:
         def __init__(self, function, args):
@@ -57,16 +54,30 @@ def factorizar(filename: str, outfile: str, timeout: float = 3600.0):
             self.exception = None
             self.completed = False
             self.time = None
+            self.peak_memory = 0  # Initialize memory tracker
 
         def worker(self):
             try:
+                # Start tracing memory allocations
+                tracemalloc.start()
+                
                 start_time = time.time()
                 self.answer = self.function(*self.args)
                 self.time = time.time() - start_time
+                
+                # Get memory usage: (current, peak)
+                _, peak = tracemalloc.get_traced_memory()
+                self.peak_memory = peak
+                
+                # Stop tracing
+                tracemalloc.stop()
+                
                 self.completed = True
             except Exception as e:
                 self.exception = e
                 self.completed = True
+                # Ensure we stop tracing even if there is an error
+                tracemalloc.stop()
 
         def run(self, timeout):
             thread = threading.Thread(target=self.worker)
@@ -75,33 +86,42 @@ def factorizar(filename: str, outfile: str, timeout: float = 3600.0):
             thread.join(timeout)
             
             if not self.completed:
-                return None, None, "Timeout"
+                return None, None, None, "Timeout"
             elif self.exception:
-                return None, None, f"Error: {self.exception}"
+                return None, None, None, f"Error: {self.exception}"
             else:
-                return self.answer, self.time, "Success"
+                return self.answer, self.time, self.peak_memory, "Success"
     
     with open(outfile, "w") as f:
-        B = 2**32 - 1
+        # B = 2**32 - 1  # Unused variable in this scope, but kept if you need it later
+        
         for bit_size, number in challenges:
             print(f"\nProcessing: {bit_size} bits, n = {number}")
 
-            runner = RunWithTimeout(qs, (number, prime_bound:= 4000, 10000))
-            result, exec_time, status = runner.run(timeout=3600)
-            print(status)
-            result = {
+            # Prepare arguments. Note: prime_bound and 10000 passed as args to qs
+            runner = RunWithTimeout(qs, (number, 4000, 10000))
+            
+            # Unpack the 4 return values now
+            result, exec_time, peak_mem, status = runner.run(timeout=timeout)
+            
+            print(f"Status: {status} | Time: {exec_time}s | Peak Mem: {peak_mem} bytes")
+            
+            output_data = {
                 'bit_size': bit_size,
                 'number': number,
                 'criba_cuadratica_factor': result,
-                'criba_cuadratica_time': exec_time
-            }                
-            f.write(str(result) + "\n")
+                'criba_cuadratica_time': exec_time,
+                'criba_cuadratica_memory_bytes': peak_mem, # Added memory field
+                'status': status
+            }
+                
+            f.write(str(output_data) + "\n")
             f.flush()
     
     return
 
 def main():
-    file = 'ProblemasFactDebilesRho.txt'
+    file = 'ExtensionRetosFactorizacion.txt'
     
     # Ensure file exists
     if not os.path.exists(file):
@@ -109,7 +129,7 @@ def main():
         return
     
     # Run challenges
-    factorizar(file, 'resultados_criba_cuadrática_debiles.txt')
+    factorizar(file, 'Resultados_qs.txt')
 
 if __name__ == "__main__":
     main()

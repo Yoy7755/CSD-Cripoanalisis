@@ -40,49 +40,36 @@ def pollardRho(n: int, alpha: int, beta: int, order: int, timeout: float = 34560
         """Función de iteración estándar dividida en 3 conjuntos."""
         subset = x % 3
         if subset == 0:
-            # S0: x -> x*x
             new_x = (x * x) % n
             new_a = (a * 2) % order
             new_b = (b * 2) % order
         elif subset == 1:
-            # S1: x -> beta*x
             new_x = (x * beta) % n
             new_a = a
             new_b = (b + 1) % order
         else:
-            # S2: x -> alpha*x
             new_x = (x * alpha) % n
             new_a = (a + 1) % order
             new_b = b
         return new_x, new_a, new_b
 
-    # Bucle principal para reintentar con diferentes semillas si falla
     while time.time() - start_time < timeout:
-        # 1. Inicialización aleatoria (Evita ciclos degenerados fijos)
         a = randrange(0, order)
         b = randrange(0, order)
         x = (pow(alpha, a, n) * pow(beta, b, n)) % n
         
-        # Copias para la "tortuga" y la "liebre"
         X, A, B = x, a, b
         XX, AA, BB = x, a, b
 
-        # 2. Ciclo de Floyd (Tortuga y Liebre)
-        for _ in range(order): # Límite de seguridad para evitar bucles infinitos
+        for _ in range(order):
             if time.time() - start_time > timeout: return None
             
-            # Tortuga avanza 1 paso
             X, A, B = f(X, A, B)
             
-            # Liebre avanza 2 pasos
             XX, AA, BB = f(XX, AA, BB)
             XX, AA, BB = f(XX, AA, BB)
 
-            # 3. Detección de colisión
             if X == XX:
-                # Ecuación: alpha^A * beta^B = alpha^AA * beta^BB (mod n)
-                # Tomando logs: A + x*B = AA + x*BB (mod order)
-                # Simplificando: x * (B - BB) = (AA - A) (mod order)
                 
                 delta_b = (B - BB) % order
                 delta_a = (AA - A) % order
@@ -90,31 +77,23 @@ def pollardRho(n: int, alpha: int, beta: int, order: int, timeout: float = 34560
                 g = gcd(delta_b, order)
                 
                 if g == 1:
-                    # Caso simple: existe un único inverso
                     try:
                         inv = pow(delta_b, -1, order)
                         return (delta_a * inv) % order
                     except ValueError:
-                        break # Fallo raro, reintentar loop externo
+                        break 
                 else:
-                    # Caso complejo: GCD > 1.
-                    # La ecuación lineal ax = b (mod m) tiene soluciones si b es divisible por g.
                     if delta_a % g == 0:
-                        # Simplificamos la ecuación dividiendo todo por g
-                        # x * (delta_b/g) = (delta_a/g) (mod order/g)
                         try:
                             inv = pow(delta_b // g, -1, order // g)
                             res = (delta_a // g * inv) % (order // g)
                             
-                            # Hay g soluciones posibles, probamos cuál es la correcta
                             for k in range(g):
                                 candidate = res + k * (order // g)
                                 if pow(alpha, candidate, n) == beta:
                                     return candidate
                         except ValueError:
-                            pass # Continuar buscando
-                
-                # Si llegamos aquí, la colisión no sirvió (ej: 0=0), reiniciamos con nuevos a, b
+                            pass 
                 break 
                 
     return None
@@ -156,19 +135,16 @@ def _solve_linear_system_mod(matrix: List[List[int]], target: List[int], modulus
     rows = len(matrix)
     cols = len(matrix[0])
     
-    # Trabajamos con copias para no mutar los originales
     M = [row[:] for row in matrix]
     res = target[:]
     
     pivot_row = 0
     col = 0
     
-    # Fase de escalonamiento (Forward elimination)
     while pivot_row < rows and col < cols:
-        # Buscar pivote en la columna actual
         sel = -1
         for i in range(pivot_row, rows):
-            if gcd(M[i][col], modulus) == 1: # Necesitamos que sea invertible mod m
+            if gcd(M[i][col], modulus) == 1: 
                 sel = i
                 break
         
@@ -176,21 +152,18 @@ def _solve_linear_system_mod(matrix: List[List[int]], target: List[int], modulus
             col += 1
             continue
             
-        # Intercambiar filas
         M[pivot_row], M[sel] = M[sel], M[pivot_row]
         res[pivot_row], res[sel] = res[sel], res[pivot_row]
         
-        # Normalizar fila pivote (hacer que el elemento principal sea 1)
         try:
             inv = pow(M[pivot_row][col], -1, modulus)
         except ValueError:
-            col += 1; continue # No invertible, saltar
+            col += 1; continue 
         
         for j in range(col, cols):
             M[pivot_row][j] = (M[pivot_row][j] * inv) % modulus
         res[pivot_row] = (res[pivot_row] * inv) % modulus
         
-        # Eliminar otras filas
         for i in range(rows):
             if i != pivot_row and M[i][col] != 0:
                 factor = M[i][col]
@@ -200,15 +173,9 @@ def _solve_linear_system_mod(matrix: List[List[int]], target: List[int], modulus
                 
         pivot_row += 1
         col += 1
-
-    # Verificación y extracción de solución
-    # Asumimos que las columnas se han resuelto en orden.
-    # Si el sistema está sobredeterminado, las filas extra deben ser consistentes (0=0).
-    # Si está subdeterminado, devolvemos una solución particular (ceros para variables libres).
     
     solution = [0] * cols
     for i in range(min(rows, cols)):
-        # Buscar el 1 en la fila i (pivote)
         for j in range(cols):
             if M[i][j] == 1:
                 solution[j] = res[i]
@@ -226,26 +193,20 @@ def indexCalculus(n: int, alpha: int, beta: int, order: int, timeout: float = 34
     """
     start_time = time.time()
     
-    # 1. Selección de Base de Factores 
-    # El tamaño de la base es crítico. Para números pequeños del ejemplo PDF usan primos pequeños.
-    # Para retos grandes, necesitaríamos una base más grande, pero el sistema lineal se vuelve costoso.
-    # Heurística simple: ~50 primos para empezar.
     B_bound = 1000
     S = _get_primes(B_bound)
     k = len(S)
     
-    relations_matrix = [] # Matriz de exponentes (e_i)
-    relations_rhs = []    # Lado derecho (r)
+    relations_matrix = [] 
+    relations_rhs = []
     
-    # 2. Búsqueda de Relaciones Lineales 
-    # Necesitamos al menos k relaciones linealmente independientes (usamos k + margen)
     required_relations = k + 10 
     
     while len(relations_matrix) < required_relations:
         if time.time() - start_time > timeout: return None
         
         r = randrange(1, order)
-        val = pow(alpha, r, n) # alpha^r mod n
+        val = pow(alpha, r, n) 
         
         is_smooth, exponents = _is_smooth_and_factor(val, S)
         
@@ -253,19 +214,15 @@ def indexCalculus(n: int, alpha: int, beta: int, order: int, timeout: float = 34
             relations_matrix.append(exponents)
             relations_rhs.append(r)
     
-    # 3. Resolver Sistema Lineal 
-    # Obtenemos log_alpha(p_i) para cada p_i en S
     logs_S = None
     while logs_S is None:
         if time.time() - start_time > timeout: return None
-        # Intentamos resolver. Si falla (sistema singular), buscamos más relaciones
         try:
             logs_S = _solve_linear_system_mod(relations_matrix, relations_rhs, order)
         except Exception:
-            pass # Error de inverso modular, seguir buscando
+            pass 
             
         if logs_S is None:
-            # Añadir más relaciones si falló la resolución
             found_new = 0
             while found_new < 5:
                 if time.time() - start_time > timeout: return None
@@ -277,22 +234,16 @@ def indexCalculus(n: int, alpha: int, beta: int, order: int, timeout: float = 34
                     relations_rhs.append(r)
                     found_new += 1
     
-    # 4. Cálculo del Logaritmo Individual
-    # Buscar r tal que beta * alpha^r sea S-smooth
     while time.time() - start_time < timeout:
         r = randrange(1, order)
-        # val = beta * alpha^r mod n
         val = (beta * pow(alpha, r, n)) % n
         
         is_smooth, exponents = _is_smooth_and_factor(val, S)
         
         if is_smooth:
-            # log(beta) + r = sum(e_i * log(p_i))  (mod order)
-            # log(beta) = sum(e_i * log(p_i)) - r  (mod order)
             
             sum_logs = 0
             for i, e_i in enumerate(exponents):
-                # logs_S[i] es el logaritmo discreto del primo S[i]
                 sum_logs = (sum_logs + e_i * logs_S[i]) % order
             
             result = (sum_logs - r) % order
@@ -321,15 +272,12 @@ def leer_fichero(filename: str) -> List[Tuple[int, int, int, int, int]]:
     retos = []
     with open(filename, 'r') as f:
         for line in f:
-            # Ignorar comentarios y líneas vacías
             if line.strip().startswith('#') or not line.strip():
                 continue
             
             try:
-                # Separar por comas y limpiar espacios
                 parts = line.strip().split(',')
                 
-                # Asegurar que tenemos los 5 elementos
                 if len(parts) != 5:
                     raise ValueError("Número incorrecto de elementos en la línea")
 

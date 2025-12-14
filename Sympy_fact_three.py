@@ -7,7 +7,13 @@ import os
 import concurrent.futures
 from typing import List, Tuple, Optional
 from sympy.ntheory.factor_ import pollard_pm1, pollard_rho
-from sympy.ntheory.ecm import ecm
+from sympy.ntheory.qs import qs
+
+
+ALGORITMOS = {
+    'qs': qs
+
+}
 def leer_fichero(filename: str) -> List[Tuple[int, int]]:
     """
     Leer el fichero y procesar cada par bits/numero
@@ -32,61 +38,78 @@ def leer_fichero(filename: str) -> List[Tuple[int, int]]:
     
     return numeros
 
-def factorizar(filename: str, outfile: str, timeout: float = 604800.0):
+def run_method(metodo, number, timeout):
     """
-    Correr en paralelo los diferentes métodos
+    Trabajador que ejecuta en paralelo las pruebas de un algoritmo.
+    """
+    method = ALGORITMOS[metodo]
     
-    Args:
-        filename (str): Path del fichero
-        timeout (float): Timeout para cada método
-    """
+    tracemalloc.start()
+    start_time = time.time()
+    
+    try:
+        factor = method(number, timeout=timeout)
+    except Exception as e:
+        factor = None
+        
+    end_time = time.time()
+    current, peak_memory = tracemalloc.get_traced_memory()
+    tracemalloc.stop()
+    
+    return factor, end_time - start_time, peak_memory
+
+def factorizar(filename: str, outfile: str, algorithms: list, timeout: float = 84000.0):
     challenges = leer_fichero(filename)
     
-    def run_method(method, number):
-        start_time = time.time()
-        factor = method(number)
-        end_time = time.time()
-        return factor, end_time - start_time
-    
-    with open(outfile, "w") as f:
+    with open(outfile, "a") as f:
+        
         for bit_size, number in challenges:
-            print(f"\nProcessing: {bit_size} bits, n = {number}")
+            print(f"\nProcesando: {bit_size} bits, n = {number}")
             
-            with concurrent.futures.ThreadPoolExecutor() as executor:
-                future_pollardp_1 = executor.submit(run_method, pollard_pm1, number)
-                future_pollard = executor.submit(run_method, pollard_rho, number)
-                future_lenstra = executor.submit(run_method, ecm, number)
-                
-                pollardp_1_factor, pollardp_1_time = future_pollardp_1.result()
-                pollard_factor, pollard_time = future_pollard.result()
-                lenstra_factor, lenstra_time = future_lenstra.result()
-                
-            result = {
-                'bit_size': bit_size,
-                'number': number,
-                'pollardP_1_factor': pollardp_1_factor,
-                'pollardP_1_time': pollardp_1_time,
-                'pollard_factor': pollard_factor,
-                'pollard_time': pollard_time,
-                'lenstra_factor': lenstra_factor,
-                'lenstra_time': lenstra_time,
+            result_row = {
+                'bit_size': bit_size, 
+                'number': number
             }
-            
-            f.write(str(result) + "\n")
+
+            with concurrent.futures.ProcessPoolExecutor() as executor:
+                future_to_algo = {}
+                
+                for algo_name in algorithms:
+                    if algo_name in ALGORITMOS:
+                        future = executor.submit(run_method, algo_name, number, timeout)
+                        future_to_algo[future] = algo_name
+                
+                for future in concurrent.futures.as_completed(future_to_algo):
+                    algo_name = future_to_algo[future]
+                    try:
+                        factor, duration, peak_mem = future.result()
+                        
+                        result_row[f'{algo_name}_factor'] = factor
+                        result_row[f'{algo_name}_time'] = duration
+                        result_row[f'{algo_name}_mem_mb'] = peak_mem / (1024 * 1024)
+                    except Exception as exc:
+                        print(f'{algo_name} generó una excepción: {exc}')
+
+            f.write(str(result_row) + "\n")
             f.flush()
-    
-    return
 
 def main():
-    file = 'big_numbers.txt'
+    parser = argparse.ArgumentParser(description="Ejecutar algoritmos de factorización midiendo su complejidad temporal y espacial.")
     
-    # Ensure file exists
-    if not os.path.exists(file):
-        print(f"Error: Fichero '{file}' no encontrado!")
-        return
-    
-    # Run challenges
-    factorizar('big_numbers.txt', 'JESUCRISTO.txt')
+    parser.add_argument("--file", type=str, required=True, help="Archivo de Entrada")
+    parser.add_argument("--out", type=str, required=True, help="Archivo de Salida")
+    parser.add_argument("--algos", nargs='+', choices=ALGORITMOS.keys(), required=True,
+                        help=f"Lista de algoritmos. Posibles algoritmos: {list(ALGORITMOS.keys())}")
+    parser.add_argument("--timeout", type=float, default=84000.0, help="Timeout en segundos a definir")
 
-if __name__ == "__main__":
-    main()
+    args = parser.parse_args()
+
+    if not os.path.exists(args.file):
+        print(f"Error: File '{args.file}' not found!")
+        return
+
+    print(f"Factorizando {args.file}")
+    print(f"Algoritmos: {args.algos}")
+    print(f"Salida: {args.out}")
+
+    factorizar(args.file, args.out, args.algos, args.timeout)
